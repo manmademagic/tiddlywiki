@@ -223,8 +223,6 @@ Error message and password prompt
 
 <li>$:/palettes/manmademagic</li>
 
-<li>$:/palettes/manmademagic theme</li>
-
 <li>$:/plugins/felixhayashi/tiddlymap/graph/nodeTypes/tmap:central-topic</li>
 
 <li>$:/plugins/felixhayashi/tiddlymap/graph/nodeTypes/tmap:neighbour</li>
@@ -325,7 +323,15 @@ Error message and password prompt
 
 <li>$:/state/peek-stylesheets/open/--1833323649$:/themes/tiddlywiki/vanilla/base</li>
 
+<li>$:/state/peek-stylesheets/open/--994748944$:/plugins/tiddlywiki/highlight/highlight.css</li>
+
 <li>$:/state/peek-stylesheets/open/--994748944$:/themes/tiddlywiki/snowwhite/base</li>
+
+<li>$:/state/peek-stylesheets/open/--994748944dark-mode</li>
+
+<li>$:/state/peek-stylesheets/open/--994748944railscasts-codemirror</li>
+
+<li>$:/state/peek-stylesheets/open/--994748944railscasts-highlight</li>
 
 <li>$:/state/plugin-info--1893909122-$:/plugins/tiddlywiki/highlight---1375639774</li>
 
@@ -643,9 +649,13 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>Automatic Dark Mode in TiddlyWiki</li>
+
 <li>Cities: Skylines</li>
 
 <li>ClickUp</li>
+
+<li>codemirror-railscasts</li>
 
 <li>Contact</li>
 
@@ -656,6 +666,8 @@ Error message and password prompt
 <li>Games</li>
 
 <li>Habitica</li>
+
+<li>highlight-railscasts</li>
 
 <li>Hosting TiddlyWiki via GitLab Pages</li>
 
@@ -674,10 +686,6 @@ Error message and password prompt
 <li>Noita</li>
 
 <li>OneNote</li>
-
-<li>railscasts-codemirror</li>
-
-<li>railscasts-highlight.js</li>
 
 <li>Reusable TOC Template</li>
 
@@ -10027,10 +10035,10 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20200217214732603" creator="manmademagic" modified="20200315075200066" modifier="manmademagic" title="$:/palette">
+<div created="20200217214732603" creator="manmademagic" modified="20200315220527390" modifier="manmademagic" title="$:/palette">
 <pre>$:/palettes/manmademagic</pre>
 </div>
-<div created="20200315020415028" creator="manmademagic" description="A theme for me, manmademagic. Light and Dark mode wrapped into one. (WIP)" modified="20200315092100166" modifier="manmademagic" name="manmademagic" tags="$:/tags/Palette" title="$:/palettes/manmademagic" type="application/x-tiddler-dictionary">
+<div created="20200315020415028" creator="manmademagic" description="A theme for me, manmademagic. Light and Dark mode wrapped into one. (WIP)" modified="20200315222932364" modifier="manmademagic" name="manmademagic" tags="$:/tags/Palette" title="$:/palettes/manmademagic" type="application/x-tiddler-dictionary">
 <pre>alert-background: #ffe476
 alert-border: #b99e2f
 alert-highlight: #881122
@@ -10043,9 +10051,11 @@ button-foreground:
 button-foreground-darkmode: #000
 button-border: 
 code-background: #f7f7f9
-code-background-dark: #f7f7f9
+code-background-darkmode: &lt;&lt;colour page-background-darkmode&gt;&gt;
 code-border: #e1e1e8
+code-border-darkmode: &lt;&lt;colour page-background-darkmode&gt;&gt;
 code-foreground: #dd1144
+code-foreground-darkmode: #ff3a3a
 diff-delete-background: #ffc9c9
 diff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;
 diff-equal-background: 
@@ -10182,122 +10192,6 @@ toolbar-done-button:
 untagged-background: #999999
 very-muted-foreground: #888888
 input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
-</div>
-<div created="20200314071127847" creator="manmademagic" description="A theme for me, manmademagic. (WIP)" modified="20200315032618178" modifier="manmademagic" name="manmademagic theme" tags="$:/tags/Palette" title="$:/palettes/manmademagic theme" type="application/x-tiddler-dictionary">
-<pre>alert-background: #ffe476
-alert-border: #b99e2f
-alert-highlight: #881122
-alert-muted-foreground: #b99e2f
-background: #2a2422
-blockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;
-button-background: 
-button-foreground: #000
-button-border: 
-code-background: #f7f7f9
-code-background-dark: #f7f7f9
-code-border: #e1e1e8
-code-foreground: #dd1144
-diff-delete-background: #ffc9c9
-diff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;
-diff-equal-background: 
-diff-equal-foreground: &lt;&lt;colour foreground&gt;&gt;
-diff-insert-background: #aaefad
-diff-insert-foreground: &lt;&lt;colour foreground&gt;&gt;
-diff-invisible-background: 
-diff-invisible-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
-dirty-indicator: #ff3a3a
-download-background: #34c734
-download-foreground: &lt;&lt;colour background&gt;&gt;
-dragger-background: &lt;&lt;colour foreground&gt;&gt;
-dragger-foreground: &lt;&lt;colour background&gt;&gt;
-dropdown-background: &lt;&lt;colour background&gt;&gt;
-dropdown-border: &lt;&lt;colour muted-foreground&gt;&gt;
-dropdown-tab-background-selected: #fff
-dropdown-tab-background: #ececec
-dropzone-background: rgba(0,200,0,0.7)
-external-link-background-hover: inherit
-external-link-background-visited: inherit
-external-link-background: inherit
-external-link-foreground-hover: inherit
-external-link-foreground-visited: #c288c3
-external-link-foreground: #eca155
-foreground: #dfdfdf
-message-background: #ecf2ff
-message-border: #cfd6e6
-message-foreground: #547599
-modal-backdrop: &lt;&lt;colour foreground&gt;&gt;
-modal-background: &lt;&lt;colour background&gt;&gt;
-modal-border: #999999
-modal-footer-background: #f5f5f5
-modal-footer-border: #dddddd
-modal-header-border: #eeeeee
-muted-foreground: #bbb
-notification-background: #ffffdd
-notification-border: #999999
-page-background: #1c1817
-pre-background: &lt;&lt;colour page-background&gt;&gt;
-pre-border: #181210
-primary: #eca155
-select-tag-background: 
-select-tag-foreground: #000
-sidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;
-sidebar-controls-foreground-hover: #000000
-sidebar-controls-foreground: #aaaaaa
-sidebar-foreground-shadow: rgba(255,255,255, 0)
-sidebar-foreground: #acacac
-sidebar-muted-foreground-hover: #444444
-sidebar-muted-foreground: #c0c0c0
-sidebar-tab-background-selected: #f4f4f4
-sidebar-tab-background: &lt;&lt;colour tab-background&gt;&gt;
-sidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;
-sidebar-tab-border: &lt;&lt;colour tab-border&gt;&gt;
-sidebar-tab-divider: #e4e4e4
-sidebar-tab-foreground-selected: 
-sidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;
-sidebar-tiddler-link-foreground-hover: #aaa
-sidebar-tiddler-link-foreground: #ddd
-site-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;
-static-alert-foreground: #aaaaaa
-tab-background-selected: #ffffff
-tab-background: #d8d8d8
-tab-border-selected: #d8d8d8
-tab-border: #cccccc
-tab-divider: #d8d8d8
-tab-foreground-selected: &lt;&lt;colour tab-foreground&gt;&gt;
-tab-foreground: #000
-table-border: #4d3933
-table-footer-background: #584641
-table-header-background: #4d3933
-tag-background: #ec6
-tag-foreground: #ffffff
-tiddler-background: &lt;&lt;colour background&gt;&gt;
-tiddler-border: &lt;&lt;colour background&gt;&gt;
-tiddler-controls-foreground-hover: #888888
-tiddler-controls-foreground-selected: #444444
-tiddler-controls-foreground: #cccccc
-tiddler-editor-background: #f8f8f8
-tiddler-editor-border-image: #ffffff
-tiddler-editor-border: #cccccc
-tiddler-editor-fields-even: #e0e8e0
-tiddler-editor-fields-odd: #f0f4f0
-tiddler-info-background: #f8f8f8
-tiddler-info-border: #dddddd
-tiddler-info-tab-background: #f8f8f8
-tiddler-link-background: &lt;&lt;colour background&gt;&gt;
-tiddler-link-foreground: &lt;&lt;colour external-link-foreground&gt;&gt;
-tiddler-subtitle-foreground: #c0c0c0
-tiddler-title-foreground: #eca155
-toolbar-new-button: 
-toolbar-options-button: 
-toolbar-save-button: 
-toolbar-info-button: 
-toolbar-edit-button: 
-toolbar-close-button: 
-toolbar-delete-button: 
-toolbar-cancel-button: 
-toolbar-done-button: 
-untagged-background: #999999
-very-muted-foreground: #888888</pre>
 </div>
 <div description="The style is applied to the node that you marked as central topic in a map." priority="1" style="{&quot;font&quot;:{&quot;size&quot;:22,&quot;color&quot;:&quot;rgba(0,0,0,1)&quot;},&quot;shape&quot;:&quot;star&quot;}" title="$:/plugins/felixhayashi/tiddlymap/graph/nodeTypes/tmap:central-topic">
 <pre></pre>
@@ -11138,8 +11032,20 @@ very-muted-foreground: #888888</pre>
 <div created="20200315020631039" creator="manmademagic" modified="20200315020636132" modifier="manmademagic" title="$:/state/peek-stylesheets/open/--1833323649$:/themes/tiddlywiki/vanilla/base">
 <pre>no</pre>
 </div>
+<div created="20200315221939729" creator="manmademagic" modified="20200315222011087" modifier="manmademagic" title="$:/state/peek-stylesheets/open/--994748944$:/plugins/tiddlywiki/highlight/highlight.css">
+<pre>no</pre>
+</div>
 <div created="20200315005104670" creator="manmademagic" modified="20200315005105332" modifier="manmademagic" title="$:/state/peek-stylesheets/open/--994748944$:/themes/tiddlywiki/snowwhite/base">
 <pre>no</pre>
+</div>
+<div created="20200315221933654" creator="manmademagic" modified="20200315222022443" modifier="manmademagic" title="$:/state/peek-stylesheets/open/--994748944dark-mode">
+<pre>no</pre>
+</div>
+<div created="20200315222018273" creator="manmademagic" modified="20200315222402666" modifier="manmademagic" title="$:/state/peek-stylesheets/open/--994748944railscasts-codemirror">
+<pre>no</pre>
+</div>
+<div created="20200315222023750" creator="manmademagic" modified="20200315222023750" modifier="manmademagic" title="$:/state/peek-stylesheets/open/--994748944railscasts-highlight">
+<pre>yes</pre>
 </div>
 <div created="20200314141712615" creator="manmademagic" modified="20200315011510747" modifier="manmademagic" title="$:/state/plugin-info--1893909122-$:/plugins/tiddlywiki/highlight---1375639774">
 <pre>usage</pre>
@@ -11189,14 +11095,14 @@ very-muted-foreground: #888888</pre>
 <div created="20200217215027194" creator="manmademagic" modified="20200315012502881" modifier="manmademagic" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
-<div created="20200314023249849" creator="manmademagic" modified="20200315005117412" modifier="manmademagic" title="$:/state/tab--959111941">
-<pre>$:/core/ui/ControlPanel/LoadedModules</pre>
+<div created="20200314023249849" creator="manmademagic" modified="20200315221859906" modifier="manmademagic" title="$:/state/tab--959111941">
+<pre>$:/core/ui/ControlPanel/Stylesheets</pre>
 </div>
 <div created="20200217214913882" creator="manmademagic" modified="20200315005151744" modifier="manmademagic" title="$:/state/tab-1342078386">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
 </div>
-<div created="20200217214416661" creator="manmademagic" modified="20200315091905906" modifier="manmademagic" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200217214416661" creator="manmademagic" modified="20200315222354441" modifier="manmademagic" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20200314072809785" creator="manmademagic" modified="20200314072809785" modifier="manmademagic" title="$:/state/tab-1835290117">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
@@ -12090,7 +11996,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200314033924922" creator="manmademagic" modified="20200314153456455" modifier="manmademagic" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre></pre>
 </div>
-<div created="20200314045844512" creator="manmademagic" modified="20200315092723132" modifier="manmademagic" title="$:/temp/search">
+<div created="20200314045844512" creator="manmademagic" modified="20200315223017845" modifier="manmademagic" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200315005200126" creator="manmademagic" modified="20200315005200126" modifier="manmademagic" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
@@ -12260,6 +12166,31 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200217214756351" creator="manmademagic" modified="20200314070908865" modifier="manmademagic" title="$:/view">
 <pre>top</pre>
 </div>
+<div created="20200315215505793" creator="manmademagic" modified="20200315222659753" modifier="manmademagic" tags="TiddlyWiki" title="Automatic Dark Mode in TiddlyWiki">
+<pre>This ~TiddlyWiki has an automatic dark mode in browsers that support the `prefers-color-scheme` query.
+
+There are two parts to make this work:
+
+#[[dark-mode]]&lt;div&gt;
+A tiddler containing CSS selectors and colour macros for the overrides &lt;/div&gt;&lt;br&gt;
+# [[$:/palettes/manmademagic]]&lt;div&gt;
+A modified [[$:/palettes/Vanilla]] palette containing additional dark mode entries to use in the macros&lt;/div&gt;
+
+
+[[dark-mode]] is tagged with `$:/tags/Stylesheet` (to make it apply) and `_css` (for organisation)&lt;br&gt;
+Here's a short snippet from it, which should demonstrate how it works:
+
+```css
+(prefers-color-scheme: dark) {
+	body.tc-body {
+		background-color: &lt;&lt;colour page-background-darkmode&gt;&gt;;
+		color: &lt;&lt;colour foreground-darkmode&gt;&gt;;
+	}
+}
+```
+
+Unfortunately it's a pretty manual process to add missing CSS selectors.</pre>
+</div>
 <div created="20200314111144741" creator="manmademagic" modified="20200314112608072" modifier="manmademagic" tags="Games" title="Cities: Skylines" tmap.id="da578daa-aa82-4827-b19f-e743efa636d4">
 <pre>#Ah this is nice and relaxing
 #Why is there not enough electricity
@@ -12268,6 +12199,62 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 </div>
 <div created="20200315025736805" creator="manmademagic" modified="20200315025747018" modifier="manmademagic" tags="_placeholder [[Tools &amp; Applications]]" title="ClickUp" tmap.id="1aed92c7-1532-4bfc-b3b3-ab4a5d10440d">
 <pre></pre>
+</div>
+<div created="20200315010620519" creator="manmademagic" modified="20200315222449120" modifier="manmademagic" module-type="codemirror-theme" name="railscasts" tags="$:/tags/Stylesheet _css" title="codemirror-railscasts" type="text/css">
+<pre>.cm-s-railscasts {
+	font-size: 1em;
+	line-height: 1.5em;
+	font-family: inconsolata, monospace;
+	letter-spacing: 0.3px;
+	word-spacing: 1px;
+	background: #2B2B2B;
+	color: #E6E1DC;
+}
+.cm-s-railscasts .CodeMirror-lines {
+	padding: 8px 0;
+}
+.cm-s-railscasts .CodeMirror-gutters {
+	box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+	background-color: #2B2B2B;
+	padding-right: 10px;
+	z-index: 3;
+	border: none;
+}
+.cm-s-railscasts div.CodeMirror-cursor {
+	border-left: 3px solid #E6E1DC;
+}
+.cm-s-railscasts .CodeMirror-activeline-background {
+	background: #333435;
+}
+.cm-s-railscasts .CodeMirror-selected {
+	background: #5A647EE0;
+}
+.cm-s-railscasts .cm-comment {
+	font-style: italic;
+	color: #BC9458;
+}
+.cm-s-railscasts .cm-number {
+	color: #DA4939;
+}
+.cm-s-railscasts .cm-atom {
+	color: #DA4939;
+}
+.cm-s-railscasts .cm-string {
+	color: #A5C261;
+}
+.cm-s-railscasts .cm-property {
+	color: #DA4939;
+}
+.cm-s-railscasts .cm-keyword {
+	color: null;
+}
+.cm-s-railscasts .cm-operator {
+	color: null;
+}
+.cm-s-railscasts .CodeMirror-linenumber {
+	color: italic;
+}</pre>
 </div>
 <div created="20200315032641661" creator="manmademagic" list-after="" modified="20200315033208818" modifier="manmademagic" tags="$:/tags/SideBar" title="Contact">
 <pre>email: [[daniel@robinson.dev|mailto:daniel@robinson.dev]]</pre>
@@ -12278,7 +12265,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 &gt;&gt;
 &lt;/div&gt;</pre>
 </div>
-<div created="20200315013815134" creator="manmademagic" modified="20200315092426303" modifier="manmademagic" tags="$:/tags/Stylesheet _css" title="dark-mode" tmap.id="e3a31f7a-309d-49b6-96aa-a2352caf9fc1">
+<div created="20200315013815134" creator="manmademagic" modified="20200315222857009" modifier="manmademagic" tags="$:/tags/Stylesheet _css" title="dark-mode" tmap.id="e3a31f7a-309d-49b6-96aa-a2352caf9fc1">
 <pre>/*
 	This tiddly contains css overrides for darkmode
 	Provided that they're set correctly in the palette, they'll apply when dark mode is available.
@@ -12436,6 +12423,17 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 	color: &lt;&lt;colour external-link-foreground-visited-darkmode&gt;&gt;;
 	}
 	
+	pre.hljs
+	{
+	background-color: &lt;&lt;colour page-background-darkmode&gt;&gt;;
+	}
+	
+	code
+	{
+	color: &lt;&lt;colour code-foreground-darkmode&gt;&gt;;
+	background-color: &lt;&lt;colour code-background-darkmode&gt;&gt;;
+	border-color: &lt;&lt;colour code-border-darkmode&gt;&gt;;
+	}
 }</pre>
 </div>
 <div created="20200314110851329" creator="manmademagic" modified="20200314135213896" modifier="manmademagic" tags="Contents" title="Games" tmap.id="7e31852d-a5ca-4018-b588-8df11f035f1f">
@@ -12445,6 +12443,114 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 </div>
 <div created="20200315025722599" creator="manmademagic" modified="20200315025736067" modifier="manmademagic" tags="[[Tools &amp; Applications]] _placeholder" title="Habitica" tmap.id="5023624b-bcde-47cd-996c-7925d6a546fe">
 <pre></pre>
+</div>
+<div created="20200315011337779" creator="manmademagic" modified="20200315222534374" modifier="manmademagic" tags="_css $:/tags/Stylesheet" title="highlight-railscasts" type="text/css">
+<pre>/*
+
+Railscasts-like style (c) Visoft, Inc. (Damien White)
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #232323;
+  color: #e6e1dc;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #bc9458;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #c26230;
+}
+
+.hljs-string,
+.hljs-number,
+.hljs-regexp,
+.hljs-variable,
+.hljs-template-variable {
+  color: #a5c261;
+}
+
+.hljs-subst {
+  color: #519f50;
+}
+
+.hljs-tag,
+.hljs-name {
+  color: #e8bf6a;
+}
+
+.hljs-type {
+  color: #da4939;
+}
+
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-attr,
+.hljs-link {
+  color: #6d9cbe;
+}
+
+.hljs-params {
+  color: #d0d0ff;
+}
+
+.hljs-attribute {
+  color: #cda869;
+}
+
+.hljs-meta {
+  color: #9b859d;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #ffc66d;
+}
+
+.hljs-addition {
+  background-color: #144212;
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #600;
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-selector-class {
+  color: #9b703f;
+}
+
+.hljs-selector-id {
+  color: #8b98ab;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}</pre>
 </div>
 <div created="20200314074115295" creator="manmademagic" modified="20200314235046252" modifier="manmademagic" tags="TiddlyWiki Guide GitLab" title="Hosting TiddlyWiki via GitLab Pages" tmap.id="b90af07b-4c94-4d4a-a983-dbb64a1966b6">
 <pre>Having a hosted ~TiddlyWiki instance means that it can be available everywhere.&lt;br&gt;
@@ -12601,177 +12707,6 @@ Currently it's a dumping ground for articles/websites captured via the [[OneNote
 My main reason for putting these into ~OneNote was to make sure that my clippings and notes are all in a single location.
 
 This is an area that I'm actively trying to improve.</pre>
-</div>
-<div created="20200315010620519" creator="manmademagic" modified="20200315015137487" modifier="manmademagic" module-type="codemirror-theme" name="railscasts" tags="$:/tags/Stylesheet _css" title="railscasts-codemirror" tmap.id="fcc460dd-c407-4dfe-be87-3e5f66da2297" type="text/css">
-<pre>.cm-s-railscasts {
-	font-size: 1em;
-	line-height: 1.5em;
-	font-family: inconsolata, monospace;
-	letter-spacing: 0.3px;
-	word-spacing: 1px;
-	background: #2B2B2B;
-	color: #E6E1DC;
-}
-.cm-s-railscasts .CodeMirror-lines {
-	padding: 8px 0;
-}
-.cm-s-railscasts .CodeMirror-gutters {
-	box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
-	background-color: #2B2B2B;
-	padding-right: 10px;
-	z-index: 3;
-	border: none;
-}
-.cm-s-railscasts div.CodeMirror-cursor {
-	border-left: 3px solid #E6E1DC;
-}
-.cm-s-railscasts .CodeMirror-activeline-background {
-	background: #333435;
-}
-.cm-s-railscasts .CodeMirror-selected {
-	background: #5A647EE0;
-}
-.cm-s-railscasts .cm-comment {
-	font-style: italic;
-	color: #BC9458;
-}
-.cm-s-railscasts .cm-number {
-	color: #DA4939;
-}
-.cm-s-railscasts .cm-atom {
-	color: #DA4939;
-}
-.cm-s-railscasts .cm-string {
-	color: #A5C261;
-}
-.cm-s-railscasts .cm-property {
-	color: #DA4939;
-}
-.cm-s-railscasts .cm-keyword {
-	color: null;
-}
-.cm-s-railscasts .cm-operator {
-	color: null;
-}
-.cm-s-railscasts .CodeMirror-linenumber {
-	color: italic;
-}</pre>
-</div>
-<div created="20200315011337779" creator="manmademagic" modified="20200315015313193" modifier="manmademagic" tags="_css $:/tags/Stylesheet" title="railscasts-highlight.js" tmap.id="4f79fda8-f0ea-4a69-a62e-b09df9beeb6a">
-<pre>/*
-
-Railscasts-like style (c) Visoft, Inc. (Damien White)
-
-*/
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: &lt;&lt;colour page-background&gt;&gt;;
-  color: #e6e1dc;
-}
-
-@media (prefers-color-scheme: dark) {
-.hljs {
-  background: &lt;&lt;colour page-background&gt;&gt;;
-	}
-}
-
-
-.hljs-comment,
-.hljs-quote {
-  color: #bc9458;
-  font-style: italic;
-}
-
-.hljs-keyword,
-.hljs-selector-tag {
-  color: #c26230;
-}
-
-.hljs-string,
-.hljs-number,
-.hljs-regexp,
-.hljs-variable,
-.hljs-template-variable {
-  color: #a5c261;
-}
-
-.hljs-subst {
-  color: #519f50;
-}
-
-.hljs-tag,
-.hljs-name {
-  color: #e8bf6a;
-}
-
-.hljs-type {
-  color: #da4939;
-}
-
-
-.hljs-symbol,
-.hljs-bullet,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-attr,
-.hljs-link {
-  color: #6d9cbe;
-}
-
-.hljs-params {
-  color: #d0d0ff;
-}
-
-.hljs-attribute {
-  color: #cda869;
-}
-
-.hljs-meta {
-  color: #9b859d;
-}
-
-.hljs-title,
-.hljs-section {
-  color: #ffc66d;
-}
-
-.hljs-addition {
-  background-color: #144212;
-  color: #e6e1dc;
-  display: inline-block;
-  width: 100%;
-}
-
-.hljs-deletion {
-  background-color: #600;
-  color: #e6e1dc;
-  display: inline-block;
-  width: 100%;
-}
-
-.hljs-selector-class {
-  color: #9b703f;
-}
-
-.hljs-selector-id {
-  color: #8b98ab;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-.hljs-link {
-  text-decoration: underline;
-}</pre>
 </div>
 <div created="20200314134633886" creator="manmademagic" modified="20200315012455804" modifier="manmademagic" tags="TiddlyWiki" title="Reusable TOC Template" tmap.id="7311e5a7-8295-40de-be5d-9993d5b9e61e">
 <pre>Most pages directly under [[Contents]] have some descriptive text, along with a TOC of pages that have matching tags.
