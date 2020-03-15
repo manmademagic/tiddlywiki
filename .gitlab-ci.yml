@@ -1,11 +1,24 @@
-# This file is a template, and might need editing before it works on your project.
-# Full project: https://gitlab.com/pages/plain-html
+# Use latest Node for this
+image: node:latest
+
+# Basic process is as follows
+# 1. Create temp .public folder
+# 2. Copy everything in the root dir to the .public folder
+# 3. Rename .public to public (This is part of the template ¯\_(ツ)_/¯ )
+# 4. Install tiddlywiki node commands
+# 5. Use tiddlywiki commands to export all sites as static files, along with the css
+# 6. Export the public folder as an artifact
 pages:
-  stage: deploy
+  cache:
+    paths:
+      - node_modules
   script:
     - mkdir .public
     - cp -r * .public
     - mv .public public
+    - npm install -g tiddlywiki
+    - tiddlywiki --verbose --load index.html --output ./public --rendertiddlers [!is[system]] $:/core/templates/static.tiddler.html static text/plain
+    - tiddlywiki --verbose --load index.html --output ./public --rendertiddler $:/core/templates/static.template.css static/static.css text/plain
   artifacts:
     paths:
       - public
