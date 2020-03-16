@@ -213,6 +213,8 @@ Error message and password prompt
 
 <li>$:/custom/css/misc</li>
 
+<li>$:/custom/ui/EditTemplate/status</li>
+
 <li>$:/DefaultTiddlers</li>
 
 <li>$:/DraftTiddlers</li>
@@ -10171,6 +10173,17 @@ color: purple;
 color: green;
 }</pre>
 </div>
+<div created="20200316230630799" creator="manmademagic" list-before="$:/core/ui/EditTemplate/type" modified="20200316230947544" modifier="manmademagic" tags="$:/tags/EditTemplate" title="$:/custom/ui/EditTemplate/status">
+<pre>&lt;br&gt;
+&lt;em class=&quot;tc-edit&quot; tooltip=&quot;Status of the page&quot;&gt;Status&lt;/em&gt;
+&lt;$select tiddler={{!!title}} field=&quot;status&quot;&gt;
+&lt;option value=&quot;placeholder&quot;&gt;Placeholder&lt;/option&gt;
+&lt;option value=&quot;draft&quot;&gt;Draft&lt;/option&gt;
+&lt;option value=&quot;&quot;&gt;Complete&lt;/option&gt;
+&lt;/$select&gt;
+&lt;br&gt;&lt;br&gt;
+</pre>
+</div>
 <div created="20200314023204881" creator="manmademagic" modified="20200314050226950" modifier="manmademagic" title="$:/DefaultTiddlers">
 <pre>Welcome</pre>
 </div>
@@ -10851,7 +10864,7 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200315232920619" creator="manmademagic" modified="20200315232923325" modifier="manmademagic" title="$:/state/tab/sidebar--1017963539">
 <pre>Contents</pre>
 </div>
-<div created="20200314023629876" creator="manmademagic" modified="20200316223540877" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
+<div created="20200314023629876" creator="manmademagic" modified="20200316231047057" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
 <pre>$:/TableOfContents</pre>
 </div>
 <div created="20200316053338489" creator="manmademagic" modified="20200316053707560" modifier="manmademagic" title="$:/state/tab1--1737007646">
@@ -10878,11 +10891,11 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200316055442229" creator="manmademagic" modified="20200316071902609" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-Thoughts--205735970">
 <pre>close</pre>
 </div>
-<div created="20200316055451971" creator="manmademagic" modified="20200316115624866" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-TiddlyWiki--205735970">
+<div created="20200316055451971" creator="manmademagic" modified="20200316231049440" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-TiddlyWiki--205735970">
 <pre>close</pre>
 </div>
-<div created="20200316055451128" creator="manmademagic" modified="20200316223437255" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-Tools &amp; Applications--205735970">
-<pre>open</pre>
+<div created="20200316055451128" creator="manmademagic" modified="20200316231050136" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-Tools &amp; Applications--205735970">
+<pre>close</pre>
 </div>
 <div created="20200316114317690" creator="manmademagic" modified="20200316114319963" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-Welcome--205735970">
 <pre>close</pre>
@@ -10959,7 +10972,7 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200316023644056" creator="manmademagic" modified="20200316023648078" modifier="manmademagic" title="$:/state/toc/TableOfContents-Tools &amp; Applications-497309061">
 <pre>open</pre>
 </div>
-<div created="20200316053929268" creator="manmademagic" modified="20200316223538960" modifier="manmademagic" title="$:/state/unfinished--1737007646">
+<div created="20200316053929268" creator="manmademagic" modified="20200316231046439" modifier="manmademagic" title="$:/state/unfinished--1737007646">
 <pre>$:/DraftTiddlers</pre>
 </div>
 <div created="20200316055026703" creator="manmademagic" modified="20200316055034187" modifier="manmademagic" title="$:/state/unfinished-109167771">
@@ -10968,7 +10981,7 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200217214714440" creator="m" modified="20200217214716196" modifier="manmademagi" title="$:/status/UserName">
 <pre>manmademagic</pre>
 </div>
-<div list="Welcome" title="$:/StoryList">
+<div created="20200316231003171" creator="manmademagic" list="Welcome" modified="20200316231022728" modifier="manmademagic" title="$:/StoryList">
 <pre></pre>
 </div>
 <div caption="{{$:/language/SideBar/Contents/Caption}}" created="20200314024017888" creator="manmademagic" list="Welcome" list-before="$:/core/ui/SideBar/Open" modified="20200316054853716" modifier="manmademagic" tags="$:/tags/SideBar" title="$:/TableOfContents">
@@ -11875,7 +11888,7 @@ Blockquote
 <div created="20200314105018301" creator="manmademagic" modified="20200316062937104" modifier="manmademagic" tags="$:/TableOfContents" title="Tools &amp; Applications">
 <pre>{{||$:/TOCPage}}</pre>
 </div>
-<div created="20200314050038268" creator="manmademagic" modified="20200316223221401" modifier="manmademagic" tags="$:/TableOfContents" title="Welcome">
+<div created="20200314050038268" creator="manmademagic" modified="20200316231000370" modifier="manmademagic" tags="$:/TableOfContents" title="Welcome">
 <pre>This is my dumping grounds for &lt;span title=&quot;tid(dly)bits&quot;&gt;tidbits&lt;/span&gt; of knowledge.
 
 It's quite empty at the moment, but hopefully there'll be more stuff soon.
