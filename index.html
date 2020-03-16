@@ -209,6 +209,10 @@ Error message and password prompt
 
 <li>$:/core/ui/SideBar/Tools</li>
 
+<li>$:/custom/css/dark-mode</li>
+
+<li>$:/custom/css/misc</li>
+
 <li>$:/DefaultTiddlers</li>
 
 <li>$:/DraftTiddlers</li>
@@ -465,6 +469,8 @@ Error message and password prompt
 
 <li>$:/state/toc/$:/TableOfContents-Tools &amp; Applications--205735970</li>
 
+<li>$:/state/toc/$:/TableOfContents-Welcome--205735970</li>
+
 <li>$:/state/toc/Contents-_Meta-1843068618</li>
 
 <li>$:/state/toc/Contents-Games--1651509658</li>
@@ -578,8 +584,6 @@ Error message and password prompt
 <li>codemirror-railscasts</li>
 
 <li>Contact</li>
-
-<li>dark-mode</li>
 
 <li>Games</li>
 
@@ -9968,6 +9972,205 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 &lt;/$set&gt;
 </pre>
 </div>
+<div created="20200315013815134" creator="manmademagic" modified="20200316114739482" modifier="manmademagic" tags="$:/tags/Stylesheet _css" title="$:/custom/css/dark-mode">
+<pre>/*
+	This tiddly contains css overrides for darkmode
+	Provided that they're set correctly in the palette, they'll apply when dark mode is available.
+*/
+@media (prefers-color-scheme: dark)
+{
+	a.tc-tiddlylink.tc-tiddlylink-missing
+	{
+	border-bottom: 1px dashed &lt;&lt;colour primary-darkmode&gt;&gt;
+	}
+	a.tc-tiddlylink.tc-tiddlylink-missing:hover
+	{
+	border-bottom-style: solid;
+	text-decoration: none;
+	}
+
+	body.tc-body {
+		background-color: &lt;&lt;colour page-background-darkmode&gt;&gt;;
+		color: &lt;&lt;colour foreground-darkmode&gt;&gt;;
+	}
+	
+	.tc-tiddler-frame {
+		background-color: &lt;&lt;colour tiddler-background-darkmode&gt;&gt;;
+		border: 1px solid &lt;&lt;color tiddler-border-darkmode&gt;&gt;;
+	}
+	
+	.tc-site-title {
+		color: &lt;&lt;colour tiddler-title-foreground-darkmode&gt;&gt;
+	}
+	
+	body.tc-dirty span.tc-dirty-indicator, body.tc-dirty span.tc-dirty-indicator svg {
+		color: &lt;&lt;colour dirty-indicator-darkmode&gt;&gt;;
+		fill: &lt;&lt;colour dirty-indicator-darkmode&gt;&gt;;
+	}
+	
+	.tc-sidebar-header {
+		color: &lt;&lt;colour sidebar-foreground&gt;&gt;;
+	}
+	
+	.tc-sidebar-lists a.tc-tiddlylink
+	{
+		color: &lt;&lt;colour sidebar-tiddler-link-foreground-darkmode&gt;&gt;;
+	}
+	
+	.tc-titlebar
+	{
+	color: &lt;&lt;colour tiddler-title-foreground-darkmode&gt;&gt;;
+	}
+	
+	.tc-tiddler-title
+	{
+	background-color: &lt;&lt;colour tiddler-background-darkmode&gt;&gt;;
+	}
+	
+	button
+	{
+	color: &lt;&lt;colour button-foreground-darkmode&gt;&gt;;
+	}
+	
+	.tc-chosen, .tc-chooser-item:hover
+	{
+	background-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
+	border-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
+	}
+	
+	.tc-chooser
+	{
+	border-right-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
+	border-left-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
+	}
+	.tc-chooser-item
+	{
+	border-top-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
+	border-bottom-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
+	}
+	
+	table, table td
+	{
+	border-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
+	border-top-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
+	border-left-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
+	border-right-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
+	border-bottom-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
+	}
+	
+	.tc-sidebar-lists .tc-tab-buttons button
+	{
+	background-color: &lt;&lt;colour sidebar-tab-background-darkmode&gt;&gt;;
+	color: &lt;&lt;colour sidebar-tab-foreground-darkmode&gt;&gt;;
+	border-top-color: &lt;&lt;colour sidebar-tab-border-darkmode&gt;&gt;;
+	border-left-color: &lt;&lt;colour sidebar-tab-border-darkmode&gt;&gt;;
+	border-right-color: &lt;&lt;colour sidebar-tab-border-darkmode&gt;&gt;;
+	border-radius: 2px;
+	}
+	.tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected
+	{
+	background-color: &lt;&lt;colour sidebar-tab-background-selected-darkmode&gt;&gt;;
+	color: &lt;&lt;colour sidebar-tab-foreground-selected-darkmode&gt;&gt;;
+	border-top-color: &lt;&lt;colour sidebar-tab-border-selected-darkmode&gt;&gt;;
+	border-left-color: &lt;&lt;colour sidebar-tab-border-selected-darkmode&gt;&gt;;
+	border-right-color: &lt;&lt;colour sidebar-tab-border-selected-darkmode&gt;&gt;;
+	}
+	.tc-sidebar-tabs .tc-tab-divider
+	{
+	border-top-color: &lt;&lt;colour sidebar-tab-divider-darkmode&gt;&gt;;
+	}
+	
+	 .tc-tab-buttons button
+	{
+	background-color: &lt;&lt;colour tab-background-darkmode&gt;&gt;;
+	color: &lt;&lt;colour tab-foreground-darkmode&gt;&gt;;
+	border-top-color: &lt;&lt;colour tab-border-darkmode&gt;&gt;;
+	border-left-color: &lt;&lt;colour tab-border-darkmode&gt;&gt;;
+	border-right-color: &lt;&lt;colour tab-border-darkmode&gt;&gt;;
+	border-radius: 2px;
+	}
+	 .tc-tab-buttons button.tc-tab-selected
+	{
+	background-color: &lt;&lt;colour tab-background-selected-darkmode&gt;&gt;;
+	color: &lt;&lt;colour tab-foreground-selected-darkmode&gt;&gt;;
+	border-top-color: &lt;&lt;colour tab-border-selected-darkmode&gt;&gt;;
+	border-left-color: &lt;&lt;colour tab-border-selected-darkmode&gt;&gt;;
+	border-right-color: &lt;&lt;colour tab-border-selected-darkmode&gt;&gt;;
+	}
+	 .tc-tab-divider
+	{
+	border-top-color: &lt;&lt;colour tab-divider-darkmode&gt;&gt;;
+	}
+	
+	pre
+	{
+	background-color: &lt;&lt;colour pre-background-darkmode&gt;&gt;;
+	border-color: &lt;&lt;colour pre-border-darkmode&gt;&gt;;
+	}
+	
+	.tc-tiddler-preview-preview, .tc-edit-tags, .CodeMirror, .tc-tiddler-frame input.tc-edit-texteditor
+	{
+	border-color: &lt;&lt;colour tiddler-editor-border-darkmode&gt;&gt;;
+	}
+	.tc-tiddler-frame input.tc-edit-texteditor
+	{
+	background-color: &lt;&lt;colour tiddler-editor-background-darkmode&gt;&gt;;
+	color: &lt;&lt;colour tiddler-editor-foreground-darkmode&gt;&gt;;
+	}
+	
+	button, textarea, input, select {
+    outline-color: &lt;&lt;colour primary-darkmode&gt;&gt;; 
+	}
+	
+	textarea, input[type=text], input[type=search], input[type=&quot;&quot;], input:not([type])
+	{
+		color: &lt;&lt;colour primary-darkmode&gt;&gt;;
+		background: &lt;&lt;colour page-background-darkmode&gt;&gt;;
+		border: 1px solid &lt;&lt;colour input-box-border-darkmode&gt;&gt; ;
+	}
+	
+	a.tc-tiddlylink {
+	color: &lt;&lt;colour tiddler-link-foreground-darkmode&gt;&gt;;
+	}
+	a.tc-tiddlylink-external {
+	color: &lt;&lt;colour external-link-foreground-darkmode&gt;&gt;;
+	}
+	
+	a.tc-tiddlylink-external:visited {
+	color: &lt;&lt;colour external-link-foreground-visited-darkmode&gt;&gt;;
+	}
+	
+	pre.hljs
+	{
+	background-color: &lt;&lt;colour page-background-darkmode&gt;&gt;;
+	}
+	
+	code
+	{
+	color: &lt;&lt;colour code-foreground-darkmode&gt;&gt;;
+	background-color: &lt;&lt;colour code-background-darkmode&gt;&gt;;
+	border-color: &lt;&lt;colour code-border-darkmode&gt;&gt;;
+	}
+
+.unfinished.draft{
+color:#52e052;
+}
+.unfinished.placeholder{
+color: #c639c6;
+}
+}</pre>
+</div>
+<div created="20200316113117739" creator="manmademagic" modified="20200316113247328" modifier="manmademagic" tags="$:/tags/Stylesheet" title="$:/custom/css/misc" type="text/css">
+<pre>.unfinished.placeholder
+{
+color: purple;
+}
+
+.unfinished.draft
+{
+color: green;
+}</pre>
+</div>
 <div created="20200314023204881" creator="manmademagic" modified="20200314050226950" modifier="manmademagic" title="$:/DefaultTiddlers">
 <pre>Welcome</pre>
 </div>
@@ -10071,11 +10274,9 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div created="20200316052913849" creator="manmademagic" list="" modified="20200316070336201" modifier="manmademagic" title="$:/MySubStoryList">
 <pre></pre>
 </div>
-<div caption="Orphans" created="20200316053947116" creator="manmademagic" modified="20200316055349459" modifier="manmademagic" tags="$:/Unfinished" title="$:/OrphanTiddlers">
+<div caption="Orphans" created="20200316053947116" creator="manmademagic" modified="20200316103859955" modifier="manmademagic" tags="$:/Unfinished" title="$:/OrphanTiddlers">
 <pre>//This isn't a great way to handle these, as it includes items that are dynamically listed.//
-&lt;&lt;list-links &quot;[is[orphan]!tag[$:/Contents]]&quot;&gt;&gt;
-
-[tag[Contents]count]</pre>
+&lt;&lt;list-links &quot;[is[orphan]!tag[$:/Contents]]&quot;&gt;&gt;</pre>
 </div>
 <div created="20200217214732603" creator="manmademagic" modified="20200315220527390" modifier="manmademagic" title="$:/palette">
 <pre>$:/palettes/manmademagic</pre>
@@ -10602,8 +10803,8 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200315232453884" creator="manmademagic" modified="20200315232459998" modifier="manmademagic" title="$:/state/tab--13384259">
 <pre>$:/core/ui/TiddlerInfo/References</pre>
 </div>
-<div created="20200314023229786" creator="manmademagic" modified="20200316062403250" modifier="manmademagic" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20200314023229786" creator="manmademagic" modified="20200316103830298" modifier="manmademagic" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20200314070928751" creator="manmademagic" modified="20200314070939134" modifier="manmademagic" title="$:/state/tab--1936963165">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
@@ -10650,7 +10851,7 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200315232920619" creator="manmademagic" modified="20200315232923325" modifier="manmademagic" title="$:/state/tab/sidebar--1017963539">
 <pre>Contents</pre>
 </div>
-<div created="20200314023629876" creator="manmademagic" modified="20200316072130560" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
+<div created="20200314023629876" creator="manmademagic" modified="20200316114910691" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
 <pre>$:/TableOfContents</pre>
 </div>
 <div created="20200316053338489" creator="manmademagic" modified="20200316053707560" modifier="manmademagic" title="$:/state/tab1--1737007646">
@@ -10677,10 +10878,13 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200316055442229" creator="manmademagic" modified="20200316071902609" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-Thoughts--205735970">
 <pre>close</pre>
 </div>
-<div created="20200316055451971" creator="manmademagic" modified="20200316055459473" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-TiddlyWiki--205735970">
+<div created="20200316055451971" creator="manmademagic" modified="20200316115624866" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-TiddlyWiki--205735970">
 <pre>close</pre>
 </div>
-<div created="20200316055451128" creator="manmademagic" modified="20200316070304663" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-Tools &amp; Applications--205735970">
+<div created="20200316055451128" creator="manmademagic" modified="20200316115624191" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-Tools &amp; Applications--205735970">
+<pre>close</pre>
+</div>
+<div created="20200316114317690" creator="manmademagic" modified="20200316114319963" modifier="manmademagic" title="$:/state/toc/$:/TableOfContents-Welcome--205735970">
 <pre>close</pre>
 </div>
 <div created="20200314113203867" creator="manmademagic" modified="20200314113203867" modifier="manmademagic" title="$:/state/toc/Contents-_Meta-1843068618">
@@ -10755,7 +10959,7 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200316023644056" creator="manmademagic" modified="20200316023648078" modifier="manmademagic" title="$:/state/toc/TableOfContents-Tools &amp; Applications-497309061">
 <pre>open</pre>
 </div>
-<div created="20200316053929268" creator="manmademagic" modified="20200316070346995" modifier="manmademagic" title="$:/state/unfinished--1737007646">
+<div created="20200316053929268" creator="manmademagic" modified="20200316114812579" modifier="manmademagic" title="$:/state/unfinished--1737007646">
 <pre>$:/OrphanTiddlers</pre>
 </div>
 <div created="20200316055026703" creator="manmademagic" modified="20200316055034187" modifier="manmademagic" title="$:/state/unfinished-109167771">
@@ -10772,8 +10976,8 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 &lt;&lt;toc-selective-expandable '$:/TableOfContents' &quot;!field:status[placeholder]!field:status[draft]&quot;&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
-<div created="20200314023229785" creator="manmademagic" modified="20200316062549373" modifier="manmademagic" title="$:/temp/advancedsearch">
-<pre>[field:status[placeholder]] [field:status[draft]]</pre>
+<div created="20200314023229785" creator="manmademagic" modified="20200316114328038" modifier="manmademagic" title="$:/temp/advancedsearch">
+<pre>dark</pre>
 </div>
 <div modified="20200315032025854" modifier="manmademagic" title="$:/temp/focussedTiddler">
 <pre>$:/ControlPanel</pre>
@@ -10823,11 +11027,11 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;2560&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -10839,7 +11043,7 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200314033924922" creator="manmademagic" modified="20200314153456455" modifier="manmademagic" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre></pre>
 </div>
-<div created="20200314045844512" creator="manmademagic" modified="20200316073252602" modifier="manmademagic" title="$:/temp/search">
+<div created="20200314045844512" creator="manmademagic" modified="20200316114232490" modifier="manmademagic" title="$:/temp/search">
 <pre></pre>
 </div>
 <div title="$:/temp/tmap/currentTiddler">
@@ -11003,44 +11207,29 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200315005022178" creator="manmademagic" modified="20200315005022178" modifier="manmademagic" title="$:/themes/tiddlywiki/vanilla/settings/editorfontfamily">
 <pre>&quot;PragmataPro Mono Liga&quot;</pre>
 </div>
-<div created="20200314131505418" creator="manmademagic" modified="20200316073242612" modifier="manmademagic" tags="_template" title="$:/TOCPage" type="">
-<pre>\define list-drafts(filter,type:&quot;ul&quot;,subtype:&quot;li&quot;,class:&quot;&quot;,emptyMessage)
+<div created="20200314131505418" creator="manmademagic" modified="20200316114148358" modifier="manmademagic" tags="_template" title="$:/TOCPage" type="">
+<pre>\define list-drafts(filter,type:&quot;ul&quot;,subtype:&quot;li&quot;,class:&quot;&quot;,emptyMessage,indicator:&quot;▪&quot;)
 \whitespace trim
+
 &lt;$type$ class=&quot;$class$&quot;&gt;
-&lt;$list filter=&quot;[$filter$!field:status[placeholder]!field:status[placeholder]]&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;
+
+&lt;$list filter=&quot;$filter$&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;
 &lt;$subtype$&gt;
 &lt;$link to={{!!title}}&gt;
 &lt;$transclude field=&quot;caption&quot;&gt;
 &lt;$view field=&quot;title&quot;/&gt;
 &lt;/$transclude&gt;
 &lt;/$link&gt;
+&lt;span title=&quot;draft&quot; class=&quot;unfinished draft&quot;&gt; &lt;$text text={{{[title{!!title}field:status[draft]then[ $indicator$]]}}} /&gt;
+&lt;/span&gt;
+&lt;span title=&quot;placeholder&quot; class=&quot;unfinished placeholder&quot;&gt;&lt;$text text={{{[title{!!title}field:status[placeholder]then[ $indicator$]]}}} /&gt;&lt;/span&gt;
 &lt;/$subtype$&gt;
 &lt;/$list&gt;
 
-&lt;$list filter=&quot;[$filter$field:status[draft]]&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;
-&lt;$subtype$&gt;
-&lt;$link to={{!!title}}&gt;
-&lt;$transclude field=&quot;caption&quot;&gt;
-&lt;$view field=&quot;title&quot;/&gt;
-&lt;/$transclude&gt;
-&lt;/$link&gt;
-&lt;/$subtype$&gt;
-&lt;/$list&gt;
-
-&lt;$list filter=&quot;[$filter$field:status[placeholder]]&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;
-&lt;$subtype$&gt;
-&lt;$link to={{!!title}}&gt;
-&lt;$transclude field=&quot;caption&quot;&gt;
-&lt;$view field=&quot;title&quot;/&gt;&amp;nbsp;(Placeholder)
-&lt;/$transclude&gt;
-&lt;/$link&gt;
-&lt;/$subtype$&gt;
-&lt;/$list&gt;
 &lt;/$type$&gt;
 \end
 
-&lt;&lt;list-links &quot;[tag{!!title}]&quot;&gt;&gt;
-</pre>
+&lt;&lt;list-drafts &quot;[tag{!!title}]&quot;&gt;&gt;</pre>
 </div>
 <div caption="Unfinished" created="20200314115528613" creator="manmademagic" list="Placeholders" modified="20200316054518661" modifier="manmademagic" tags="$:/tags/SideBar" title="$:/Unfinished">
 <pre>List of tiddlers that are in some state of incompleteness.
@@ -11086,7 +11275,7 @@ Unfortunately it's a pretty manual process to add missing CSS selectors.</pre>
 #Why is polution everything
 #//Maybe I don't need need to micro manage my traffic lights//</pre>
 </div>
-<div created="20200315025736805" creator="manmademagic" modified="20200316061301231" modifier="manmademagic" status="placeholder" tags="[[Tools &amp; Applications]]" title="ClickUp">
+<div created="20200315025736805" creator="manmademagic" modified="20200316114806866" modifier="manmademagic" status="placeholder" tags="[[Tools &amp; Applications]]" title="ClickUp">
 <pre></pre>
 </div>
 <div created="20200315010620519" creator="manmademagic" modified="20200315222449120" modifier="manmademagic" module-type="codemirror-theme" name="railscasts" tags="$:/tags/Stylesheet _css" title="codemirror-railscasts" type="text/css">
@@ -11147,187 +11336,6 @@ Unfortunately it's a pretty manual process to add missing CSS selectors.</pre>
 </div>
 <div created="20200315032641661" creator="manmademagic" list-after="" modified="20200315033208818" modifier="manmademagic" tags="$:/tags/SideBar" title="Contact">
 <pre>email: [[daniel@robinson.dev|mailto:daniel@robinson.dev]]</pre>
-</div>
-<div created="20200315013815134" creator="manmademagic" modified="20200316022531626" modifier="manmademagic" tags="$:/tags/Stylesheet _css" title="dark-mode">
-<pre>/*
-	This tiddly contains css overrides for darkmode
-	Provided that they're set correctly in the palette, they'll apply when dark mode is available.
-*/
-@media (prefers-color-scheme: dark)
-{
-	a.tc-tiddlylink.tc-tiddlylink-missing
-	{
-	border-bottom: 1px dashed &lt;&lt;colour primary-darkmode&gt;&gt;
-	}
-	a.tc-tiddlylink.tc-tiddlylink-missing:hover
-	{
-	border-bottom-style: solid;
-	text-decoration: none;
-	}
-
-	body.tc-body {
-		background-color: &lt;&lt;colour page-background-darkmode&gt;&gt;;
-		color: &lt;&lt;colour foreground-darkmode&gt;&gt;;
-	}
-	
-	.tc-tiddler-frame {
-		background-color: &lt;&lt;colour tiddler-background-darkmode&gt;&gt;;
-		border: 1px solid &lt;&lt;color tiddler-border-darkmode&gt;&gt;;
-	}
-	
-	.tc-site-title {
-		color: &lt;&lt;colour tiddler-title-foreground-darkmode&gt;&gt;
-	}
-	
-	body.tc-dirty span.tc-dirty-indicator, body.tc-dirty span.tc-dirty-indicator svg {
-		color: &lt;&lt;colour dirty-indicator-darkmode&gt;&gt;;
-		fill: &lt;&lt;colour dirty-indicator-darkmode&gt;&gt;;
-	}
-	
-	.tc-sidebar-header {
-		color: &lt;&lt;colour sidebar-foreground&gt;&gt;;
-	}
-	
-	.tc-sidebar-lists a.tc-tiddlylink
-	{
-		color: &lt;&lt;colour sidebar-tiddler-link-foreground-darkmode&gt;&gt;;
-	}
-	
-	.tc-titlebar
-	{
-	color: &lt;&lt;colour tiddler-title-foreground-darkmode&gt;&gt;;
-	}
-	
-	.tc-tiddler-title
-	{
-	background-color: &lt;&lt;colour tiddler-background-darkmode&gt;&gt;;
-	}
-	
-	button
-	{
-	color: &lt;&lt;colour button-foreground-darkmode&gt;&gt;;
-	}
-	
-	.tc-chosen, .tc-chooser-item:hover
-	{
-	background-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	border-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	}
-	
-	.tc-chooser
-	{
-	border-right-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	}
-	.tc-chooser-item
-	{
-	border-top-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	border-bottom-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	}
-	
-	table, table td
-	{
-	border-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	border-top-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	border-right-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	border-bottom-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	}
-	
-	.tc-sidebar-lists .tc-tab-buttons button
-	{
-	background-color: &lt;&lt;colour sidebar-tab-background-darkmode&gt;&gt;;
-	color: &lt;&lt;colour sidebar-tab-foreground-darkmode&gt;&gt;;
-	border-top-color: &lt;&lt;colour sidebar-tab-border-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour sidebar-tab-border-darkmode&gt;&gt;;
-	border-right-color: &lt;&lt;colour sidebar-tab-border-darkmode&gt;&gt;;
-	border-radius: 2px;
-	}
-	.tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected
-	{
-	background-color: &lt;&lt;colour sidebar-tab-background-selected-darkmode&gt;&gt;;
-	color: &lt;&lt;colour sidebar-tab-foreground-selected-darkmode&gt;&gt;;
-	border-top-color: &lt;&lt;colour sidebar-tab-border-selected-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour sidebar-tab-border-selected-darkmode&gt;&gt;;
-	border-right-color: &lt;&lt;colour sidebar-tab-border-selected-darkmode&gt;&gt;;
-	}
-	.tc-sidebar-tabs .tc-tab-divider
-	{
-	border-top-color: &lt;&lt;colour sidebar-tab-divider-darkmode&gt;&gt;;
-	}
-	
-	 .tc-tab-buttons button
-	{
-	background-color: &lt;&lt;colour tab-background-darkmode&gt;&gt;;
-	color: &lt;&lt;colour tab-foreground-darkmode&gt;&gt;;
-	border-top-color: &lt;&lt;colour tab-border-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour tab-border-darkmode&gt;&gt;;
-	border-right-color: &lt;&lt;colour tab-border-darkmode&gt;&gt;;
-	border-radius: 2px;
-	}
-	 .tc-tab-buttons button.tc-tab-selected
-	{
-	background-color: &lt;&lt;colour tab-background-selected-darkmode&gt;&gt;;
-	color: &lt;&lt;colour tab-foreground-selected-darkmode&gt;&gt;;
-	border-top-color: &lt;&lt;colour tab-border-selected-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour tab-border-selected-darkmode&gt;&gt;;
-	border-right-color: &lt;&lt;colour tab-border-selected-darkmode&gt;&gt;;
-	}
-	 .tc-tab-divider
-	{
-	border-top-color: &lt;&lt;colour tab-divider-darkmode&gt;&gt;;
-	}
-	
-	pre
-	{
-	background-color: &lt;&lt;colour pre-background-darkmode&gt;&gt;;
-	border-color: &lt;&lt;colour pre-border-darkmode&gt;&gt;;
-	}
-	
-	.tc-tiddler-preview-preview, .tc-edit-tags, .CodeMirror, .tc-tiddler-frame input.tc-edit-texteditor
-	{
-	border-color: &lt;&lt;colour tiddler-editor-border-darkmode&gt;&gt;;
-	}
-	.tc-tiddler-frame input.tc-edit-texteditor
-	{
-	background-color: &lt;&lt;colour tiddler-editor-background-darkmode&gt;&gt;;
-	color: &lt;&lt;colour tiddler-editor-foreground-darkmode&gt;&gt;;
-	}
-	
-	button, textarea, input, select {
-    outline-color: &lt;&lt;colour primary-darkmode&gt;&gt;; 
-	}
-	
-	textarea, input[type=text], input[type=search], input[type=&quot;&quot;], input:not([type])
-	{
-		color: &lt;&lt;colour primary-darkmode&gt;&gt;;
-		background: &lt;&lt;colour page-background-darkmode&gt;&gt;;
-		border: 1px solid &lt;&lt;colour input-box-border-darkmode&gt;&gt; ;
-	}
-	
-	a.tc-tiddlylink {
-	color: &lt;&lt;colour tiddler-link-foreground-darkmode&gt;&gt;;
-	}
-	a.tc-tiddlylink-external {
-	color: &lt;&lt;colour external-link-foreground-darkmode&gt;&gt;;
-	}
-	
-	a.tc-tiddlylink-external:visited {
-	color: &lt;&lt;colour external-link-foreground-visited-darkmode&gt;&gt;;
-	}
-	
-	pre.hljs
-	{
-	background-color: &lt;&lt;colour page-background-darkmode&gt;&gt;;
-	}
-	
-	code
-	{
-	color: &lt;&lt;colour code-foreground-darkmode&gt;&gt;;
-	background-color: &lt;&lt;colour code-background-darkmode&gt;&gt;;
-	border-color: &lt;&lt;colour code-border-darkmode&gt;&gt;;
-	}
-}</pre>
 </div>
 <div created="20200314110851329" creator="manmademagic" modified="20200316062910271" modifier="manmademagic" tags="$:/TableOfContents" title="Games">
 <pre>Here's a shortlist of games that I enjoy playing (usually stuff that I'll come back to)
@@ -11513,7 +11521,7 @@ You'll need to enter it on each computer you access the wiki from.
 <div created="20200314062539541" creator="manmademagic" modified="20200316022414473" modifier="manmademagic" tags="dumb" title="I can't actually remember when">
 <pre>simple as that</pre>
 </div>
-<div created="20200315225714914" creator="manmademagic" modified="20200316023032497" modifier="manmademagic" status="placeholder" tags="TiddlyWiki" title="Images in TiddlyWiki">
+<div created="20200315225714914" creator="manmademagic" modified="20200316114252356" modifier="manmademagic" status="draft" tags="TiddlyWiki" title="Images in TiddlyWiki">
 <pre>This is a placeholder for now, as it's an area I'm actively investigating, where I plan to note how I'm handling things.
 
 I want to try and reduce bloat to keep the size of the entire ~TiddlyWiki to a mininum, so I'm more than likely going to host the files externally.&lt;br&gt;
@@ -11605,7 +11613,7 @@ My main reason for putting these into ~OneNote was to make sure that my clipping
 
 This is an area that I'm actively trying to improve.</pre>
 </div>
-<div created="20200314134633886" creator="manmademagic" modified="20200316070511638" modifier="manmademagic" tags="TiddlyWiki" title="Reusable TOC Template">
+<div created="20200314134633886" creator="manmademagic" modified="20200316115616914" modifier="manmademagic" tags="TiddlyWiki" title="Reusable TOC Template">
 <pre>Most pages directly under [[$:/TableOfContents]] have some descriptive text, along with a TOC of pages that have matching tags.
 
 Originally I started out with the following:
@@ -11627,9 +11635,8 @@ This takes the title of the current page, and then uses that as a tag filter.
 
 This is pretty good, and at the very least makes it easy to copy/paste everywhere without issue.
 
----
 
-Finally I settled on using a template page, which has the following benefits:
+Then I moved onto using a barebones template page, which has the following benefits:
 
 * Easily added to new pages
 * I can change at any point, and //all// TOC pages will get updated
@@ -11652,6 +11659,25 @@ Then on each of the actual content page, the following code is used:
 This transcludes the [[|$:/TOCPage]] page, but will use the details of the current page.
 
 So it effectively takes the current page's title, passed it to the TOC template, which then does filtering, and gives back a list of links.
+
+---
+
+Finally, I wanted to add some indicators to the list to mark draft/placeholder pages.&lt;br&gt;
+This is only because I've got those excluded from the sidebar, but I still want them semi-accessible.
+
+This is mostly using the list-links macro, but I've added the following (just after where the actual link is displayed):
+
+```
+&lt;span title=&quot;draft&quot; class=&quot;unfinished draft&quot;&gt;
+&lt;$text text={{{[title{!!title}field:status[draft]then[ $indicator$]]}}} /&gt;
+&lt;/span&gt;
+&lt;span title=&quot;placeholder&quot; class=&quot;unfinished placeholder&quot;&gt;
+&lt;$text text={{{[title{!!title}field:status[placeholder]then[ $indicator$]]}}} /&gt;
+&lt;/span&gt;
+```
+
+It's basically doing some hacky transclusion to see if the current page is either a draft or a placeholder. Depending on that, it will set the text of the span to be what is defined in the ''indicator'' parameter ( ▪ by default)
+
 
 !!Notes
 
@@ -11868,7 +11894,7 @@ It's quite empty at the moment, but hopefully there'll be more stuff soon.
 
 &lt;/$navigator&gt;</pre>
 </div>
-<div created="20200314052020423" creator="manmademagic" modified="20200316054806491" modifier="manmademagic" title="Welcome (Extended Edition)">
+<div created="20200314052020423" creator="manmademagic" modified="20200316114315354" modifier="manmademagic" tags="Welcome" title="Welcome (Extended Edition)">
 <pre>My original intention was to create a blog, and post regular-ish updates to that.&lt;br/&gt;
 The plan:
 
