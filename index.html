@@ -10839,7 +10839,7 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200314033924922" creator="manmademagic" modified="20200314153456455" modifier="manmademagic" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre></pre>
 </div>
-<div created="20200314045844512" creator="manmademagic" modified="20200316072129913" modifier="manmademagic" title="$:/temp/search">
+<div created="20200314045844512" creator="manmademagic" modified="20200316073252602" modifier="manmademagic" title="$:/temp/search">
 <pre></pre>
 </div>
 <div title="$:/temp/tmap/currentTiddler">
@@ -11003,11 +11003,11 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200315005022178" creator="manmademagic" modified="20200315005022178" modifier="manmademagic" title="$:/themes/tiddlywiki/vanilla/settings/editorfontfamily">
 <pre>&quot;PragmataPro Mono Liga&quot;</pre>
 </div>
-<div created="20200314131505418" creator="manmademagic" modified="20200316062841691" modifier="manmademagic" tags="_template" title="$:/TOCPage" type="">
+<div created="20200314131505418" creator="manmademagic" modified="20200316073242612" modifier="manmademagic" tags="_template" title="$:/TOCPage" type="">
 <pre>\define list-drafts(filter,type:&quot;ul&quot;,subtype:&quot;li&quot;,class:&quot;&quot;,emptyMessage)
 \whitespace trim
 &lt;$type$ class=&quot;$class$&quot;&gt;
-&lt;$list filter=&quot;$filter$&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;
+&lt;$list filter=&quot;[$filter$!field:status[placeholder]!field:status[placeholder]]&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;
 &lt;$subtype$&gt;
 &lt;$link to={{!!title}}&gt;
 &lt;$transclude field=&quot;caption&quot;&gt;
@@ -11016,10 +11016,31 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 &lt;/$link&gt;
 &lt;/$subtype$&gt;
 &lt;/$list&gt;
+
+&lt;$list filter=&quot;[$filter$field:status[draft]]&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;
+&lt;$subtype$&gt;
+&lt;$link to={{!!title}}&gt;
+&lt;$transclude field=&quot;caption&quot;&gt;
+&lt;$view field=&quot;title&quot;/&gt;
+&lt;/$transclude&gt;
+&lt;/$link&gt;
+&lt;/$subtype$&gt;
+&lt;/$list&gt;
+
+&lt;$list filter=&quot;[$filter$field:status[placeholder]]&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;
+&lt;$subtype$&gt;
+&lt;$link to={{!!title}}&gt;
+&lt;$transclude field=&quot;caption&quot;&gt;
+&lt;$view field=&quot;title&quot;/&gt;&amp;nbsp;(Placeholder)
+&lt;/$transclude&gt;
+&lt;/$link&gt;
+&lt;/$subtype$&gt;
+&lt;/$list&gt;
 &lt;/$type$&gt;
 \end
 
-&lt;&lt;list-drafts &quot;[tag{!!title}]&quot;&gt;&gt;</pre>
+&lt;&lt;list-links &quot;[tag{!!title}]&quot;&gt;&gt;
+</pre>
 </div>
 <div caption="Unfinished" created="20200314115528613" creator="manmademagic" list="Placeholders" modified="20200316054518661" modifier="manmademagic" tags="$:/tags/SideBar" title="$:/Unfinished">
 <pre>List of tiddlers that are in some state of incompleteness.
