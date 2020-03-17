@@ -615,8 +615,6 @@ Error message and password prompt
 
 <li>Contact</li>
 
-<li>Draft of '$:/custom/css/dark-mode' by manmademagic</li>
-
 <li>Games</li>
 
 <li>Habitica</li>
@@ -10038,7 +10036,7 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 &lt;/$set&gt;
 </pre>
 </div>
-<div created="20200315013815134" creator="manmademagic" modified="20200317110416272" modifier="manmademagic" tags="$:/tags/Stylesheet _css" title="$:/custom/css/dark-mode">
+<div created="20200315013815134" creator="manmademagic" modified="20200317213107787" modifier="manmademagic" tags="$:/tags/Stylesheet _css" title="$:/custom/css/dark-mode">
 <pre>/*
 	This tiddly contains css overrides for darkmode
 	Provided that they're set correctly in the palette, they'll apply when dark mode is available.
@@ -11507,205 +11505,6 @@ Unfortunately it's a pretty manual process to add missing CSS selectors.</pre>
 <div created="20200315032641661" creator="manmademagic" list-after="" modified="20200315033208818" modifier="manmademagic" tags="$:/tags/SideBar" title="Contact">
 <pre>email: [[daniel@robinson.dev|mailto:daniel@robinson.dev]]</pre>
 </div>
-<div created="20200315013815134" creator="manmademagic" draft.of="$:/custom/css/dark-mode" draft.title="$:/custom/css/dark-mode" modified="20200317110418136" modifier="manmademagic" tags="$:/tags/Stylesheet _css" title="Draft of '$:/custom/css/dark-mode' by manmademagic">
-<pre>/*
-	This tiddly contains css overrides for darkmode
-	Provided that they're set correctly in the palette, they'll apply when dark mode is available.
-*/
-@media (prefers-color-scheme: dark)
-{
-	a.tc-tiddlylink.tc-tiddlylink-missing
-	{
-	border-bottom: 1px dashed &lt;&lt;colour primary-darkmode&gt;&gt;
-	}
-	a.tc-tiddlylink.tc-tiddlylink-missing:hover
-	{
-	border-bottom-style: solid;
-	text-decoration: none;
-	}
-
-	body.tc-body {
-		background-color: &lt;&lt;colour page-background-darkmode&gt;&gt;;
-		color: &lt;&lt;colour foreground-darkmode&gt;&gt;;
-	}
-	
-	.tc-tiddler-frame {
-		background-color: &lt;&lt;colour tiddler-background-darkmode&gt;&gt;;
-		border: 1px solid &lt;&lt;color tiddler-border-darkmode&gt;&gt;;
-	}
-	
-	.tc-site-title {
-		color: &lt;&lt;colour tiddler-title-foreground-darkmode&gt;&gt;
-	}
-	
-	body.tc-dirty span.tc-dirty-indicator, body.tc-dirty span.tc-dirty-indicator svg {
-		color: &lt;&lt;colour dirty-indicator-darkmode&gt;&gt;;
-		fill: &lt;&lt;colour dirty-indicator-darkmode&gt;&gt;;
-	}
-	
-	.tc-sidebar-header {
-		color: &lt;&lt;colour sidebar-foreground&gt;&gt;;
-	}
-	
-	.tc-sidebar-lists a.tc-tiddlylink
-	{
-		color: &lt;&lt;colour sidebar-tiddler-link-foreground-darkmode&gt;&gt;;
-	}
-	
-	.tc-titlebar
-	{
-	color: &lt;&lt;colour tiddler-title-foreground-darkmode&gt;&gt;;
-	}
-	
-	.tc-tiddler-title
-	{
-	background-color: &lt;&lt;colour tiddler-background-darkmode&gt;&gt;;
-	}
-	
-	button
-	{
-	color: &lt;&lt;colour button-foreground-darkmode&gt;&gt;;
-	}
-	
-	.tc-chosen, .tc-chooser-item:hover
-	{
-	background-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	border-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	}
-	
-	.tc-chooser
-	{
-	border-right-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	}
-	.tc-chooser-item
-	{
-	border-top-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	border-bottom-color: &lt;&lt;colour table-header-background-darkmode&gt;&gt;;
-	}
-	
-	table, table td
-	{
-	border-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	border-top-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	border-right-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	border-bottom-color: &lt;&lt;colour table-border-darkmode&gt;&gt;;
-	}
-	
-	.tc-sidebar-lists .tc-tab-buttons button
-	{
-	background-color: &lt;&lt;colour sidebar-tab-background-darkmode&gt;&gt;;
-	color: &lt;&lt;colour sidebar-tab-foreground-darkmode&gt;&gt;;
-border-color: &lt;&lt;colour sidebar-tab-border-darkmode&gt;&gt;;
-	border-radius: 2px;
-	}
-	.tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected
-	{
-	background-color: &lt;&lt;colour sidebar-tab-background-selected-darkmode&gt;&gt;;
-	color: &lt;&lt;colour sidebar-tab-foreground-selected-darkmode&gt;&gt;;
-	border-top-color: &lt;&lt;colour sidebar-tab-border-selected-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour sidebar-tab-border-selected-darkmode&gt;&gt;;
-	border-right-color: &lt;&lt;colour sidebar-tab-border-selected-darkmode&gt;&gt;;
-	}
-	.tc-sidebar-tabs .tc-tab-divider
-	{
-	border-top-color: &lt;&lt;colour sidebar-tab-divider-darkmode&gt;&gt;;
-	}
-	
-	 .tc-tab-buttons button
-	{
-	background-color: &lt;&lt;colour tab-background-darkmode&gt;&gt;;
-	color: &lt;&lt;colour tab-foreground-darkmode&gt;&gt;;
-	border-top-color: &lt;&lt;colour tab-border-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour tab-border-darkmode&gt;&gt;;
-	border-right-color: &lt;&lt;colour tab-border-darkmode&gt;&gt;;
-	border-radius: 2px;
-	}
-	 .tc-tab-buttons button.tc-tab-selected
-	{
-	background-color: &lt;&lt;colour tab-background-selected-darkmode&gt;&gt;;
-	color: &lt;&lt;colour tab-foreground-selected-darkmode&gt;&gt;;
-	border-top-color: &lt;&lt;colour tab-border-selected-darkmode&gt;&gt;;
-	border-left-color: &lt;&lt;colour tab-border-selected-darkmode&gt;&gt;;
-	border-right-color: &lt;&lt;colour tab-border-selected-darkmode&gt;&gt;;
-	}
-	 .tc-tab-divider, .tc-tab-content.tc-vertical
-	{
-	border-color: &lt;&lt;colour tab-divider-darkmode&gt;&gt;;
-	}
-	
-	pre
-	{
-	background-color: &lt;&lt;colour pre-background-darkmode&gt;&gt;;
-	border-color: &lt;&lt;colour pre-border-darkmode&gt;&gt;;
-	}
-	
-	.tc-tiddler-preview-preview, .tc-edit-tags, .CodeMirror, .tc-tiddler-frame input.tc-edit-texteditor
-	{
-	border-color: &lt;&lt;colour tiddler-editor-border-darkmode&gt;&gt;;
-	}
-	.tc-tiddler-frame input.tc-edit-texteditor
-	{
-	background-color: &lt;&lt;colour tiddler-editor-background-darkmode&gt;&gt;;
-	color: &lt;&lt;colour tiddler-editor-foreground-darkmode&gt;&gt;;
-	}
-
-.tc-edit-texteditor {
-background-color: red;
-}
-
-textarea
-{
-background: none;
-background-color: &lt;&lt;colour tidder-editor-background-darkmode&gt;&gt;;
-background: red;
-background-color: red;
-	color: &lt;&lt;colour tiddler-editor-background-darkmode&gt;&gt;;
-}
-	
-	button, input, select {
-    outline-color: &lt;&lt;colour primary-darkmode&gt;&gt;; 
-	}
-	
-	input[type=text], input[type=search], input[type=&quot;&quot;], input:not([type])
-	{
-		color: &lt;&lt;colour primary-darkmode&gt;&gt;;
-		background: &lt;&lt;colour page-background-darkmode&gt;&gt;;
-		border: 1px solid &lt;&lt;colour input-box-border-darkmode&gt;&gt; ;
-	}
-	
-	a.tc-tiddlylink {
-	color: &lt;&lt;colour tiddler-link-foreground-darkmode&gt;&gt;;
-	}
-	a.tc-tiddlylink-external {
-	color: &lt;&lt;colour external-link-foreground-darkmode&gt;&gt;;
-	}
-	
-	a.tc-tiddlylink-external:visited {
-	color: &lt;&lt;colour external-link-foreground-visited-darkmode&gt;&gt;;
-	}
-	
-	pre.hljs
-	{
-	background-color: &lt;&lt;colour page-background-darkmode&gt;&gt;;
-	}
-	
-	code
-	{
-	color: &lt;&lt;colour code-foreground-darkmode&gt;&gt;;
-	background-color: &lt;&lt;colour code-background-darkmode&gt;&gt;;
-	border-color: &lt;&lt;colour code-border-darkmode&gt;&gt;;
-	}
-
-.unfinished.draft{
-color:#52e052;
-}
-.unfinished.placeholder{
-color: #c639c6;
-}
-}</pre>
-</div>
 <div created="20200314110851329" creator="manmademagic" modified="20200316234516860" modifier="manmademagic" tags="TOC" title="Games">
 <pre>Here's a shortlist of games that I enjoy playing (usually stuff that I'll come back to)
 
@@ -12249,7 +12048,7 @@ Blockquote
 <pre>Tools/Applications/Utilities that I find useful.
 &lt;&lt;TOCPage&gt;&gt;</pre>
 </div>
-<div created="20200314050038268" creator="manmademagic" list-before="" modified="20200317040928816" modifier="manmademagic" tags="TOC" title="Welcome">
+<div created="20200314050038268" creator="manmademagic" list-before="" modified="20200317213113183" modifier="manmademagic" tags="TOC" title="Welcome">
 <pre>This is my dumping grounds for &lt;span title=&quot;tid(dly)bits&quot;&gt;tidbits&lt;/span&gt; of knowledge.
 
 It's quite empty at the moment, but hopefully there'll be more stuff soon.
