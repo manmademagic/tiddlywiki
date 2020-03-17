@@ -207,6 +207,8 @@ Error message and password prompt
 
 <li>$:/core/ui/SideBar/More</li>
 
+<li>$:/core/ui/SideBar/Recent</li>
+
 <li>$:/core/ui/SideBar/Tools</li>
 
 <li>$:/custom/css/dark-mode</li>
@@ -217,17 +219,25 @@ Error message and password prompt
 
 <li>$:/custom/palettes/manmademagic</li>
 
+<li>$:/custom/state/recent--1280166252</li>
+
 <li>$:/custom/state/unfinished--151682606</li>
+
+<li>$:/custom/state/unfinished--570208261</li>
 
 <li>$:/custom/state/unfinished-519850882</li>
 
 <li>$:/custom/ui/EditTemplate/status</li>
 
+<li>$:/custom/ui/SideBar/Recent/RecentlyCreated</li>
+
+<li>$:/custom/ui/SideBar/Recent/RecentlyModified</li>
+
 <li>$:/custom/ui/SideBar/Unfinished</li>
 
 <li>$:/custom/ui/SideBar/Unfinished/Drafts</li>
 
-<li>$:/custom/ui/SideBar/Unfinished/OrphanTiddlers</li>
+<li>$:/custom/ui/SideBar/Unfinished/Orphans</li>
 
 <li>$:/custom/ui/SideBar/Unfinished/Outdated</li>
 
@@ -288,10 +298,6 @@ Error message and password prompt
 <li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/plugins/tiddlywiki/codemirror</li>
 
 <li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/plugins/tiddlywiki/codemirror-autocomplete</li>
-
-<li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/plugins/tiddlywiki/codemirror-mode-htmlmixed</li>
-
-<li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/plugins/tiddlywiki/codemirror-mode-x-tiddlywiki</li>
 
 <li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/plugins/tiddlywiki/codemirror-search-replace</li>
 
@@ -9961,6 +9967,11 @@ Error message and password prompt
 &lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;[all[shadows+tiddlers]tag[$:/tags/MoreSideBar]!has[draft.of]]&quot; default={{$:/config/DefaultMoreSidebarTab}} state=&quot;$:/state/tab/moresidebar&quot; class=&quot;tc-vertical&quot; /&gt;
 &lt;/div&gt;</pre>
 </div>
+<div caption="{{$:/language/SideBar/Recent/Caption}}" created="20200317080142027" creator="manmademagic" modified="20200317084955841" modifier="manmademagic" showDrafts="false" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/Recent">
+<pre>&lt;$checkbox tiddler=&quot;$:/core/ui/SideBar/Recent&quot; field=&quot;showDrafts&quot; checked=&quot;true&quot; unchecked=&quot;false&quot;&gt; Show Drafts?&lt;/$checkbox&gt;
+
+&lt;&lt;tabs &quot;[tag[$:/core/ui/SideBar/Recent]sort[]]&quot; &quot;$:/custom/ui/SideBar/Recent/RecentlyCreated&quot; &quot;$:/custom/state/recent&quot; &quot;tc-vertical&quot;&gt;&gt;</pre>
+</div>
 <div caption="{{$:/language/SideBar/Tools/Caption}}" created="20200315233549074" creator="manmademagic" modified="20200315233555034" modifier="manmademagic" title="$:/core/ui/SideBar/Tools">
 <pre>\define lingo-base() $:/language/ControlPanel/
 \define config-title()
@@ -10379,7 +10390,13 @@ untagged-background: #999999
 very-muted-foreground: #888888
 input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 </div>
-<div created="20200316233611036" creator="manmademagic" modified="20200316233921745" modifier="manmademagic" title="$:/custom/state/unfinished--151682606">
+<div created="20200317080557577" creator="manmademagic" modified="20200317085003501" modifier="manmademagic" title="$:/custom/state/recent--1280166252">
+<pre>Draft of '$:/custom/ui/SideBar/Recent/RecentlyModified' by manmademagic</pre>
+</div>
+<div created="20200316233611036" creator="manmademagic" modified="20200317084949117" modifier="manmademagic" title="$:/custom/state/unfinished--151682606">
+<pre>$:/custom/ui/SideBar/Unfinished/Drafts</pre>
+</div>
+<div created="20200317084802523" creator="manmademagic" modified="20200317084803190" modifier="manmademagic" title="$:/custom/state/unfinished--570208261">
 <pre>$:/custom/ui/SideBar/Unfinished/Outdated</pre>
 </div>
 <div created="20200316233602336" creator="manmademagic" modified="20200316233605748" modifier="manmademagic" title="$:/custom/state/unfinished-519850882">
@@ -10397,30 +10414,51 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 &lt;br&gt;&lt;br&gt;
 </pre>
 </div>
-<div caption="Unfinished" created="20200314115528613" creator="manmademagic" list="Placeholders" modified="20200316233608475" modifier="manmademagic" tags="$:/tags/SideBar" title="$:/custom/ui/SideBar/Unfinished">
+<div caption="Recently Created" created="20200317080156968" creator="manmademagic" modified="20200317084131296" modifier="manmademagic" tags="$:/core/ui/SideBar/Recent" title="$:/custom/ui/SideBar/Recent/RecentlyCreated">
+<pre>&lt;$reveal type=&quot;match&quot; stateTitle=&quot;$:/core/ui/SideBar/Recent&quot; stateField=&quot;showDrafts&quot; text=&quot;true&quot;&gt;
+&lt;$macrocall $name=&quot;timeline&quot; format={{$:/language/RecentChanges/DateFormat}} dateField=&quot;created&quot; subfilter=&quot;!field:status[placeholder]&quot;/&gt;
+&lt;/$reveal&gt;
+
+&lt;$reveal type=&quot;nomatch&quot; stateTitle=&quot;$:/core/ui/SideBar/Recent&quot; stateField=&quot;showDrafts&quot; text=&quot;true&quot;&gt;
+&lt;$macrocall $name=&quot;timeline&quot; format={{$:/language/RecentChanges/DateFormat}} dateField=&quot;created&quot; subfilter=&quot;!field:status[placeholder]!field:status[draft]&quot;/&gt;
+&lt;/$reveal&gt;</pre>
+</div>
+<div caption="Recently Modified" created="20200317080226997" creator="manmademagic" modified="20200317085011947" modifier="manmademagic" tags="$:/core/ui/SideBar/Recent" title="$:/custom/ui/SideBar/Recent/RecentlyModified">
+<pre>&lt;$reveal type=&quot;match&quot; stateTitle=&quot;$:/core/ui/SideBar/Recent&quot; stateField=&quot;showDrafts&quot; text=&quot;true&quot;&gt;
+&lt;$macrocall $name=&quot;timeline&quot; format={{$:/language/RecentChanges/DateFormat}} dateField=&quot;modified&quot; subfilter=&quot;!field:status[placeholder]&quot;/&gt;
+&lt;/$reveal&gt;
+
+&lt;$reveal type=&quot;nomatch&quot; stateTitle=&quot;$:/core/ui/SideBar/Recent&quot; stateField=&quot;showDrafts&quot; text=&quot;true&quot;&gt;
+&lt;$macrocall $name=&quot;timeline&quot; format={{$:/language/RecentChanges/DateFormat}} dateField=&quot;modified&quot; subfilter=&quot;!field:status[placeholder]!field:status[draft]&quot;/&gt;
+&lt;/$reveal&gt;</pre>
+</div>
+<div caption="Unfinished" created="20200314115528613" creator="manmademagic" modified="20200317084800621" modifier="manmademagic" tags="$:/tags/SideBar" title="$:/custom/ui/SideBar/Unfinished">
 <pre>List of tiddlers that are in some state of incompleteness.
 &lt;br&gt;
 Mainly for me to be able to track, but feel free to peruse them.
 
 &lt;&lt;tabs &quot;[tag[$:/custom/ui/SideBar/Unfinished]sort[]]&quot; &quot;$:/custom/ui/sidebar/unfinished/drafts&quot; &quot;$:/custom/state/unfinished&quot; &quot;tc-vertical&quot;&gt;&gt;</pre>
 </div>
-<div caption="Drafts" created="20200316053034695" creator="manmademagic" modified="20200316232851787" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/Drafts">
-<pre>&lt;&lt;list-links &quot;[field:status[draft]]&quot;&gt;&gt;
+<div caption="Drafts" created="20200316053034695" creator="manmademagic" modified="20200317084816469" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/Drafts">
+<pre>//Tiddlers I need to finish//
+&lt;&lt;list-links &quot;[field:status[draft]]&quot;&gt;&gt;
 </pre>
 </div>
-<div caption="Orphans" created="20200316053947116" creator="manmademagic" modified="20200316232913862" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/OrphanTiddlers">
-<pre>//This isn't a great way to handle these, as it includes items that are dynamically listed.//
+<div caption="Orphans" created="20200316053947116" creator="manmademagic" modified="20200317084741827" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/Orphans">
+<pre>//Tiddlers that have lost their parents//
 &lt;&lt;list-links &quot;[is[orphan]!tag[$:/Contents]]&quot;&gt;&gt;</pre>
 </div>
-<div caption="Outdated" created="20200316233623945" creator="manmademagic" modified="20200316234011399" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/Outdated">
-<pre>Tiddlers that need to be updated.
+<div caption="Outdated" created="20200316233623945" creator="manmademagic" modified="20200317084840075" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/Outdated">
+<pre>//Tiddlers I need to update//
 &lt;&lt;list-links &quot;[field:status[outdated]]&quot;&gt;&gt;</pre>
 </div>
-<div caption="Placeholders" created="20200316053028965" creator="manmademagic" modified="20200316232950667" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/Placeholders">
-<pre>&lt;&lt;list-links &quot;[field:status[placeholder]]&quot;&gt;&gt;</pre>
+<div caption="Placeholders" created="20200316053028965" creator="manmademagic" modified="20200317084828151" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/Placeholders">
+<pre>//Tiddlers I plan to create//
+&lt;&lt;list-links &quot;[field:status[placeholder]]&quot;&gt;&gt;</pre>
 </div>
-<div caption="Untagged" created="20200316053102167" creator="manmademagic" modified="20200316232936994" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/Untagged">
-<pre>&lt;&lt;list-links &quot;[untagged[]!is[system]]&quot;&gt;&gt;</pre>
+<div caption="Untagged" created="20200316053102167" creator="manmademagic" modified="20200317084937282" modifier="manmademagic" tags="$:/custom/ui/SideBar/Unfinished" title="$:/custom/ui/SideBar/Unfinished/Untagged">
+<pre>//Tiddlers I need to tag//
+&lt;&lt;list-links &quot;[untagged[]!is[system]!field:status[placeholder]!field:status[draft]]&quot;&gt;&gt;</pre>
 </div>
 <div caption="{{$:/language/SideBar/Contents/Caption}}" created="20200314024017888" creator="manmademagic" list-before="" modified="20200317040944506" modifier="manmademagic" tags="$:/tags/SideBar" title="$:/custom/ui/TOC">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -10465,7 +10503,7 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20200316052913849" creator="manmademagic" current-tiddler="Welcome (Extended Edition)" modified="20200316070336201" modifier="manmademagic" title="$:/MySubHistoryList" type="application/json">
+<div created="20200316052913849" creator="manmademagic" current-tiddler="Welcome (Extended Edition)" modified="20200317080641758" modifier="manmademagic" title="$:/MySubHistoryList" type="application/json">
 <pre>[
     {
         &quot;title&quot;: &quot;Welcome (Extended Edition)&quot;,
@@ -10532,10 +10570,21 @@ Mainly for me to be able to track, but feel free to peruse them.
             &quot;bottom&quot;: 269.296875,
             &quot;height&quot;: 20
         }
+    },
+    {
+        &quot;title&quot;: &quot;Welcome (Extended Edition)&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 249.296875,
+            &quot;left&quot;: 85,
+            &quot;width&quot;: 47.078125,
+            &quot;right&quot;: 132.078125,
+            &quot;bottom&quot;: 269.296875,
+            &quot;height&quot;: 20
+        }
     }
 ]</pre>
 </div>
-<div created="20200316052913849" creator="manmademagic" list="" modified="20200316070336201" modifier="manmademagic" title="$:/MySubStoryList">
+<div created="20200316052913849" creator="manmademagic" list="" modified="20200317080641758" modifier="manmademagic" title="$:/MySubStoryList">
 <pre></pre>
 </div>
 <div created="20200217214732603" creator="manmademagic" modified="20200316233450741" modifier="manmademagic" title="$:/palette">
@@ -10687,12 +10736,6 @@ Mainly for me to be able to track, but feel free to peruse them.
 <pre>no</pre>
 </div>
 <div created="20200314153509618" creator="manmademagic" modified="20200314153517553" modifier="manmademagic" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/plugins/tiddlywiki/codemirror-autocomplete">
-<pre>no</pre>
-</div>
-<div created="20200314033729096" creator="manmademagic" modified="20200314033729096" modifier="manmademagic" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/plugins/tiddlywiki/codemirror-mode-htmlmixed">
-<pre>yes</pre>
-</div>
-<div created="20200314033804021" creator="manmademagic" modified="20200314153552099" modifier="manmademagic" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/plugins/tiddlywiki/codemirror-mode-x-tiddlywiki">
 <pre>no</pre>
 </div>
 <div created="20200314033931862" creator="manmademagic" modified="20200314033932491" modifier="manmademagic" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/plugins/tiddlywiki/codemirror-search-replace">
@@ -10908,7 +10951,7 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200316233106626" creator="manmademagic" modified="20200316233106626" modifier="manmademagic" title="$:/state/tab--1489606161">
 <pre>$:/core/ui/TiddlerInfo/Tagging</pre>
 </div>
-<div created="20200314023229786" creator="manmademagic" modified="20200316233546759" modifier="manmademagic" title="$:/state/tab--1498284803">
+<div created="20200314023229786" creator="manmademagic" modified="20200317081501025" modifier="manmademagic" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20200314070928751" creator="manmademagic" modified="20200314070939134" modifier="manmademagic" title="$:/state/tab--1936963165">
@@ -10938,14 +10981,14 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200217214913882" creator="manmademagic" modified="20200316003231101" modifier="manmademagic" title="$:/state/tab-1342078386">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Plugins</pre>
 </div>
-<div created="20200217214416661" creator="manmademagic" modified="20200316233448602" modifier="manmademagic" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200217214416661" creator="manmademagic" modified="20200317080853072" modifier="manmademagic" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20200314072809785" creator="manmademagic" modified="20200314072809785" modifier="manmademagic" title="$:/state/tab-1835290117">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
 </div>
-<div created="20200217214418806" creator="manmademagic" modified="20200316052611977" modifier="manmademagic" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/GitLab</pre>
+<div created="20200217214418806" creator="manmademagic" modified="20200317080852260" modifier="manmademagic" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/TiddlySpot</pre>
 </div>
 <div created="20200315233616908" creator="manmademagic" modified="20200315233621346" modifier="manmademagic" title="$:/state/tab/moresidebar-1645249547">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
@@ -10956,7 +10999,7 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200315232920619" creator="manmademagic" modified="20200315232923325" modifier="manmademagic" title="$:/state/tab/sidebar--1017963539">
 <pre>Contents</pre>
 </div>
-<div created="20200314023629876" creator="manmademagic" modified="20200316234941039" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
+<div created="20200314023629876" creator="manmademagic" modified="20200317085016090" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
 <pre>$:/custom/ui/TOC</pre>
 </div>
 <div created="20200316053338489" creator="manmademagic" modified="20200316053707560" modifier="manmademagic" title="$:/state/tab1--1737007646">
@@ -11085,8 +11128,8 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div list="Welcome" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200314023229785" creator="manmademagic" modified="20200316234046689" modifier="manmademagic" title="$:/temp/advancedsearch">
-<pre>custom</pre>
+<div created="20200314023229785" creator="manmademagic" modified="20200317084408401" modifier="manmademagic" title="$:/temp/advancedsearch">
+<pre>unfin</pre>
 </div>
 <div modified="20200315032025854" modifier="manmademagic" title="$:/temp/focussedTiddler">
 <pre>$:/ControlPanel</pre>
