@@ -13,8 +13,8 @@ pages:
     paths:
       - node_modules
   script:
-    - ls -la
-    - cp public/index.html public/oldindex.html
+    - 'curl --location --output artifacts.zip --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://gitlab.example.com/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/master/download?job=pages"'
+    - unzip artifacts.zip -d artifacts
     - mkdir .public
     - cp -r * .public
     - mv .public public
