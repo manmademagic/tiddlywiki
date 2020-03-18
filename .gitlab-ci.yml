@@ -12,6 +12,7 @@ pages:
   cache:
     paths:
       - node_modules
+  allow_failure: true
   script:
     - mkdir public
     - cp index.html public/index.html
@@ -28,4 +29,4 @@ pages:
       - public
   only:
     - master
-  allow_falure: true
+
