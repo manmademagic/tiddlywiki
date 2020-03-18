@@ -13,6 +13,8 @@ pages:
     paths:
       - node_modules
   script:
+    - wget https://gitlab.com/manmademagic/tiddlywiki/-/jobs/artifacts/master/download?job=pages
+    - unzip artifacts.zip -d artifacts
     - mkdir .public
     - cp -r * .public
     - mv .public public
