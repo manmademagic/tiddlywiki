@@ -10038,7 +10038,7 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 &lt;/$set&gt;
 </pre>
 </div>
-<div created="20200315013815134" creator="manmademagic" modified="20200317213107787" modifier="manmademagic" tags="$:/tags/Stylesheet _css" title="$:/custom/css/dark-mode">
+<div created="20200315013815134" creator="manmademagic" modified="20200318005434701" modifier="manmademagic" tags="$:/tags/Stylesheet _css" title="$:/custom/css/dark-mode">
 <pre>/*
 	This tiddly contains css overrides for darkmode
 	Provided that they're set correctly in the palette, they'll apply when dark mode is available.
@@ -10229,36 +10229,87 @@ background-color: red;
 	border-color: &lt;&lt;colour code-border-darkmode&gt;&gt;;
 	}
 
-.unfinished.draft{
+.unfinished span.draft{
 color:#52e052;
 }
-.unfinished.placeholder{
+.unfinished span.placeholder{
 color: #c639c6;
+}
+
+.unfinished span.outdated {
+color: &lt;&lt;colour primary-darkmode&gt;&gt;;
+}
+
+div.status &gt; div
+{
+color: &lt;&lt;colour page-background-darkmode&gt;&gt;;
+font-weight: bolder;
+}
+
+div.status &gt; div.placeholder
+{
+background-color: #c639c6;
+}
+
+div.status &gt; div.draft
+{
+background-color: #52e052;
+}
+
+div.status &gt; div.outdated
+{
+background-color: &lt;&lt;colour primary-darkmode&gt;&gt;;
 }
 }</pre>
 </div>
-<div created="20200316113117739" creator="manmademagic" modified="20200317005601861" modifier="manmademagic" tags="$:/tags/Stylesheet" title="$:/custom/css/misc" type="text/css">
-<pre>span.unfinished &gt; span
+<div created="20200316113117739" creator="manmademagic" modified="20200318005215435" modifier="manmademagic" tags="$:/tags/Stylesheet" title="$:/custom/css/misc" type="text/css">
+<pre>.unfinished span
 {
 display: none;
 }
 
-span.unfinished &gt; .placeholder
+.unfinished .placeholder
 {
 color: purple;
 display: inline;
 }
 
-span.unfinished &gt; .draft
+.unfinished .draft
 {
 color: green;
 display: inline;
 }
 
-span.unfinished &gt; .outdated
+.unfinished .outdated
 {
 color: orange;
 display: inline;
+}
+
+.status div
+{
+display: none;
+text-align: center;
+text-transform: capitalize;
+border-radius: 0.2em;
+}
+
+.status .placeholder
+{
+background-color: purple;
+display: block;
+}
+
+.status .draft
+{
+background-color: green;
+display: block;
+}
+
+.status .outdated
+{
+background-color: orange;
+display: block;
 }</pre>
 </div>
 <div created="20200316232236643" creator="manmademagic" modified="20200317005701163" modifier="manmademagic" tags="$:/tags/Macro" title="$:/custom/macros">
@@ -10439,7 +10490,7 @@ input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 <div created="20200317080557577" creator="manmademagic" modified="20200317104704223" modifier="manmademagic" title="$:/custom/state/recent--1280166252">
 <pre>$:/custom/ui/SideBar/Recent/RecentlyCreated</pre>
 </div>
-<div created="20200316233611036" creator="manmademagic" modified="20200318002857637" modifier="manmademagic" title="$:/custom/state/unfinished--151682606">
+<div created="20200316233611036" creator="manmademagic" modified="20200318005445748" modifier="manmademagic" title="$:/custom/state/unfinished--151682606">
 <pre>$:/custom/ui/SideBar/Unfinished/Drafts</pre>
 </div>
 <div created="20200317084802523" creator="manmademagic" modified="20200317084803190" modifier="manmademagic" title="$:/custom/state/unfinished--570208261">
@@ -10511,17 +10562,8 @@ Mainly for me to be able to track, but feel free to peruse them.
 &lt;&lt;toc-selective-expandable 'TOC' &quot;!field:status[placeholder]!field:status[draft]&quot;&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
-<div created="20200316234848760" creator="manmademagic" list-before="$:/core/ui/EditTemplate/type" modified="20200316234948913" modifier="manmademagic" status="" tags="[[ $:/tags/ViewTemplate]]" title="$:/custom/ui/ViewTemplate/status">
-<pre>&lt;br&gt;
-&lt;em class=&quot;tc-edit&quot; tooltip=&quot;Status of the page&quot;&gt;Status&lt;/em&gt;
-&lt;$select tiddler={{!!title}} field=&quot;status&quot;&gt;
-&lt;option value=&quot;placeholder&quot;&gt;Placeholder&lt;/option&gt;
-&lt;option value=&quot;draft&quot;&gt;Draft&lt;/option&gt;
-&lt;option value=&quot;outdated&quot;&gt;Outdated&lt;/option&gt;
-&lt;option value=&quot;&quot;&gt;Complete&lt;/option&gt;
-&lt;/$select&gt;
-&lt;br&gt;&lt;br&gt;
-</pre>
+<div created="20200316234848760" creator="manmademagic" list-before="$:/core/ui/ViewTemplate/body" modified="20200318004633407" modifier="manmademagic" tags="$:/tags/ViewTemplate" title="$:/custom/ui/ViewTemplate/status">
+<pre>&lt;div class=&quot;status&quot;&gt;&lt;div class={{!!status}}&gt;{{!!status}}&lt;/div&gt;&lt;/div&gt;</pre>
 </div>
 <div created="20200314023204881" creator="manmademagic" modified="20200314050226950" modifier="manmademagic" title="$:/DefaultTiddlers">
 <pre>Welcome</pre>
@@ -11000,8 +11042,8 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200316233106626" creator="manmademagic" modified="20200316233106626" modifier="manmademagic" title="$:/state/tab--1489606161">
 <pre>$:/core/ui/TiddlerInfo/Tagging</pre>
 </div>
-<div created="20200314023229786" creator="manmademagic" modified="20200317110054593" modifier="manmademagic" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20200314023229786" creator="manmademagic" modified="20200318004738773" modifier="manmademagic" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20200314070928751" creator="manmademagic" modified="20200314070939134" modifier="manmademagic" title="$:/state/tab--1936963165">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
@@ -11048,7 +11090,7 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200315232920619" creator="manmademagic" modified="20200315232923325" modifier="manmademagic" title="$:/state/tab/sidebar--1017963539">
 <pre>Contents</pre>
 </div>
-<div created="20200314023629876" creator="manmademagic" modified="20200318003059265" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
+<div created="20200314023629876" creator="manmademagic" modified="20200318005446482" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
 <pre>$:/custom/ui/TOC</pre>
 </div>
 <div created="20200316053338489" creator="manmademagic" modified="20200316053707560" modifier="manmademagic" title="$:/state/tab1--1737007646">
@@ -11159,7 +11201,7 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200316234021438" creator="manmademagic" modified="20200318002853719" modifier="manmademagic" title="$:/state/toc/TOC-Games-1100700722">
 <pre>close</pre>
 </div>
-<div created="20200316233651811" creator="manmademagic" modified="20200317103910256" modifier="manmademagic" title="$:/state/toc/TOC-TiddlyWiki-1100700722">
+<div created="20200316233651811" creator="manmademagic" modified="20200318005503292" modifier="manmademagic" title="$:/state/toc/TOC-TiddlyWiki-1100700722">
 <pre>close</pre>
 </div>
 <div created="20200318002850494" creator="manmademagic" modified="20200318002852964" modifier="manmademagic" title="$:/state/toc/TOC-Welcome-1100700722">
@@ -11180,8 +11222,8 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div list="Welcome" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200314023229785" creator="manmademagic" modified="20200318003011911" modifier="manmademagic" title="$:/temp/advancedsearch">
-<pre>viewtempl</pre>
+<div created="20200314023229785" creator="manmademagic" modified="20200318004737864" modifier="manmademagic" title="$:/temp/advancedsearch">
+<pre>css</pre>
 </div>
 <div modified="20200315032025854" modifier="manmademagic" title="$:/temp/focussedTiddler">
 <pre>$:/ControlPanel</pre>
