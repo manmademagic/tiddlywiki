@@ -12,16 +12,14 @@ pages:
   cache:
     paths:
       - node_modules
-  allow_failure: true
   script:
-    - mkdir public
-    - cp index.html public/index.html
     - 'curl --location --output artifacts.zip --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/master/download?job=pages"'
     - unzip artifacts.zip -d artifacts
+    - mkdir public
     - mv artifacts/public/images public
     - npm install -g tiddlywiki
     - tiddlywiki --load index.html --output public --savetiddlers [is[image]] images
-    - tiddlywiki --load index.html --output public --setfield [is[image]] _canonical_uri $:/core/templates/canonical-uri-external-image text/plain --setfield [is[image]!is[system]] text "" text/plain --rendertiddler $:/core/save/all imagetest.html text/plain
+    - tiddlywiki --load index.html --output public --setfield [is[image]] _canonical_uri $:/core/templates/canonical-uri-external-image text/plain --setfield [is[image]!is[system]] text "" text/plain --rendertiddler $:/core/save/all index.html text/plain
 #    - tiddlywiki --verbose --load index.html --output ./public --rendertiddlers [!is[system]] $:/core/templates/static.tiddler.html static text/plain
 #    - tiddlywiki --verbose --load index.html --output ./public --rendertiddler $:/core/templates/static.template.css static/static.css text/plain
   artifacts:
