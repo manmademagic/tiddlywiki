@@ -603,6 +603,8 @@ Error message and password prompt
 
 <li>$:/state/toc/TOC-TiddlyWiki-1100700722</li>
 
+<li>$:/state/toc/TOC-Tools &amp; Applications-1100700722</li>
+
 <li>$:/state/toc/TOC-Welcome-1100700722</li>
 
 <li>$:/state/unfinished--1572217886</li>
@@ -884,6 +886,8 @@ Error message and password prompt
 <li>Noita</li>
 
 <li>OneNote</li>
+
+<li>PocketSmith</li>
 
 <li>Reusable TOC Template</li>
 
@@ -10258,7 +10262,7 @@ tc-tiddler-frame tc-tiddler-edit-frame $(missingTiddlerClass)$ $(shadowTiddlerCl
 &lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;[all[shadows+tiddlers]tag[$:/tags/MoreSideBar]!has[draft.of]]&quot; default={{$:/config/DefaultMoreSidebarTab}} state=&quot;$:/state/tab/moresidebar&quot; class=&quot;tc-vertical&quot; /&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="{{$:/language/SideBar/Recent/Caption}}" created="20200317080142027" creator="manmademagic" modified="20200317085420148" modifier="manmademagic" showdrafts="false" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/Recent">
+<div caption="{{$:/language/SideBar/Recent/Caption}}" created="20200317080142027" creator="manmademagic" modified="20200319212807054" modifier="manmademagic" showDrafts="true" showdrafts="false" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/Recent">
 <pre>&lt;$checkbox tiddler=&quot;$:/core/ui/SideBar/Recent&quot; field=&quot;showDrafts&quot; checked=&quot;true&quot; unchecked=&quot;false&quot;&gt; Show Drafts?&lt;/$checkbox&gt;
 
 &lt;&lt;tabs &quot;[tag[$:/core/ui/SideBar/Recent]sort[]]&quot; &quot;$:/custom/ui/SideBar/Recent/RecentlyCreated&quot; &quot;$:/custom/state/recent&quot; &quot;tc-vertical&quot;&gt;&gt;</pre>
@@ -10568,8 +10572,8 @@ background-color: orange;
 display: block;
 }</pre>
 </div>
-<div created="20200316232236643" creator="manmademagic" modified="20200317005701163" modifier="manmademagic" tags="$:/tags/Macro" title="$:/custom/macros">
-<pre>\define TOCPage(filter:&quot;[tag{!!title}]&quot;,type:&quot;ul&quot;,subtype:&quot;li&quot;,class:&quot;&quot;,emptyMessage,indicator:&quot;▪&quot;)
+<div created="20200316232236643" creator="manmademagic" modified="20200319211258578" modifier="manmademagic" tags="$:/tags/Macro" title="$:/custom/macros">
+<pre>\define TOCPage(filter:&quot;[tag{!!title}sort[title]]&quot;,type:&quot;ul&quot;,subtype:&quot;li&quot;,class:&quot;&quot;,emptyMessage,indicator:&quot;▪&quot;)
 \whitespace trim
 
 &lt;$type$ class=&quot;$class$&quot;&gt;
@@ -10743,7 +10747,7 @@ untagged-background: #999999
 very-muted-foreground: #888888
 input-box-border-darkmode: &lt;&lt;colour table-border-darkmode&gt;&gt;</pre>
 </div>
-<div created="20200317080557577" creator="manmademagic" modified="20200317104704223" modifier="manmademagic" title="$:/custom/state/recent--1280166252">
+<div created="20200317080557577" creator="manmademagic" modified="20200319212808329" modifier="manmademagic" title="$:/custom/state/recent--1280166252">
 <pre>$:/custom/ui/SideBar/Recent/RecentlyCreated</pre>
 </div>
 <div created="20200316233611036" creator="manmademagic" modified="20200318005445748" modifier="manmademagic" title="$:/custom/state/unfinished--151682606">
@@ -12002,8 +12006,8 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200316233106626" creator="manmademagic" modified="20200316233106626" modifier="manmademagic" title="$:/state/tab--1489606161">
 <pre>$:/core/ui/TiddlerInfo/Tagging</pre>
 </div>
-<div created="20200314023229786" creator="manmademagic" modified="20200319024201823" modifier="manmademagic" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20200314023229786" creator="manmademagic" modified="20200319212345424" modifier="manmademagic" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20200314070928751" creator="manmademagic" modified="20200314070939134" modifier="manmademagic" title="$:/state/tab--1936963165">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
@@ -12050,7 +12054,7 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200315232920619" creator="manmademagic" modified="20200315232923325" modifier="manmademagic" title="$:/state/tab/sidebar--1017963539">
 <pre>Contents</pre>
 </div>
-<div created="20200314023629876" creator="manmademagic" modified="20200318005446482" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
+<div created="20200314023629876" creator="manmademagic" modified="20200319212809014" modifier="manmademagic" title="$:/state/tab/sidebar--595412856">
 <pre>$:/custom/ui/TOC</pre>
 </div>
 <div created="20200316053338489" creator="manmademagic" modified="20200316053707560" modifier="manmademagic" title="$:/state/tab1--1737007646">
@@ -12161,11 +12165,14 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200316234021438" creator="manmademagic" modified="20200318002853719" modifier="manmademagic" title="$:/state/toc/TOC-Games-1100700722">
 <pre>close</pre>
 </div>
-<div created="20200316233651811" creator="manmademagic" modified="20200318005503292" modifier="manmademagic" title="$:/state/toc/TOC-TiddlyWiki-1100700722">
+<div created="20200316233651811" creator="manmademagic" modified="20200319212811984" modifier="manmademagic" title="$:/state/toc/TOC-TiddlyWiki-1100700722">
 <pre>close</pre>
 </div>
-<div created="20200318002850494" creator="manmademagic" modified="20200319025450796" modifier="manmademagic" title="$:/state/toc/TOC-Welcome-1100700722">
-<pre>open</pre>
+<div created="20200319211034367" creator="manmademagic" modified="20200319212813124" modifier="manmademagic" title="$:/state/toc/TOC-Tools &amp; Applications-1100700722">
+<pre>close</pre>
+</div>
+<div created="20200318002850494" creator="manmademagic" modified="20200319211027852" modifier="manmademagic" title="$:/state/toc/TOC-Welcome-1100700722">
+<pre>close</pre>
 </div>
 <div created="20200316231809948" creator="manmademagic" modified="20200316231809948" modifier="manmademagic" title="$:/state/unfinished--1572217886">
 <pre>$:/custom/ui/sidebar/unfinished/drafts</pre>
@@ -12179,11 +12186,11 @@ Mainly for me to be able to track, but feel free to peruse them.
 <div created="20200217214714440" creator="m" modified="20200217214716196" modifier="manmademagi" title="$:/status/UserName">
 <pre>manmademagic</pre>
 </div>
-<div list="Welcome" title="$:/StoryList">
+<div created="20200319212326376" creator="manmademagic" list="Welcome" modified="20200319212757976" modifier="manmademagic" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200314023229785" creator="manmademagic" modified="20200319025407741" modifier="manmademagic" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20200314023229785" creator="manmademagic" modified="20200319212413574" modifier="manmademagic" title="$:/temp/advancedsearch">
+<pre>tagtemplate</pre>
 </div>
 <div modified="20200315032025854" modifier="manmademagic" title="$:/temp/focussedTiddler">
 <pre>$:/ControlPanel</pre>
@@ -13212,7 +13219,7 @@ Unfortunately it's a pretty manual process to add missing CSS selectors.</pre>
 #Why is polution everything
 #//Maybe I don't need need to micro manage my traffic lights//</pre>
 </div>
-<div created="20200315025736805" creator="manmademagic" modified="20200316114806866" modifier="manmademagic" status="placeholder" tags="[[Tools &amp; Applications]]" title="ClickUp">
+<div created="20200315025736805" creator="manmademagic" modified="20200319211517138" modifier="manmademagic" status="placeholder" tags="productivity [[Tools &amp; Applications]]" title="ClickUp">
 <pre></pre>
 </div>
 <div created="20200315010620519" creator="manmademagic" modified="20200315222449120" modifier="manmademagic" module-type="codemirror-theme" name="railscasts" tags="$:/tags/Stylesheet _css" title="codemirror-railscasts" type="text/css">
@@ -13279,7 +13286,7 @@ Unfortunately it's a pretty manual process to add missing CSS selectors.</pre>
 
 &lt;&lt;TOCPage&gt;&gt;</pre>
 </div>
-<div created="20200315025722599" creator="manmademagic" modified="20200316023009692" modifier="manmademagic" status="placeholder" tags="[[Tools &amp; Applications]]" title="Habitica">
+<div created="20200315025722599" creator="manmademagic" modified="20200319211527006" modifier="manmademagic" status="placeholder" tags="habits [[Tools &amp; Applications]]" title="Habitica">
 <pre></pre>
 </div>
 <div created="20200315011337779" creator="manmademagic" modified="20200315222534374" modifier="manmademagic" tags="_css $:/tags/Stylesheet" title="highlight-railscasts" type="text/css">
@@ -13574,7 +13581,7 @@ There's also many secrets to discover, most of which would be near impossible to
 
 If you're a fan of roguelikes, then this should definitely be on your radar.</pre>
 </div>
-<div created="20200314113058433" creator="manmademagic" modified="20200316022333124" modifier="manmademagic" tags="[[Tools &amp; Applications]]" title="OneNote">
+<div created="20200314113058433" creator="manmademagic" modified="20200319211433474" modifier="manmademagic" tags="[[Tools &amp; Applications]] documentation notetaking" title="OneNote">
 <pre>~OneNote is currently my primary note taking tool.
 
 I've tried many (//Evernote, Notion, org-mode//), but ~OneNote always happens to be the one I come back to.
@@ -13615,8 +13622,11 @@ My main reason for putting these into ~OneNote was to make sure that my clipping
 
 This is an area that I'm actively trying to improve.</pre>
 </div>
-<div created="20200314134633886" creator="manmademagic" modified="20200316233902941" modifier="manmademagic" status="outdated" tags="TiddlyWiki" title="Reusable TOC Template">
-<pre>Most pages directly under [[$:/TableOfContents]] have some descriptive text, along with a TOC of pages that have matching tags.
+<div created="20200319211037559" creator="manmademagic" modified="20200319211411471" modifier="manmademagic" status="placeholder" tags="[[Tools &amp; Applications]] budgeting" title="PocketSmith">
+<pre></pre>
+</div>
+<div created="20200314134633886" creator="manmademagic" modified="20200319211345581" modifier="manmademagic" status="outdated" tags="TiddlyWiki" title="Reusable TOC Template">
+<pre>Most pages directly under [[$:/custom/ui/TOC]] have some descriptive text, along with a TOC of pages that have matching tags.
 
 Originally I started out with the following:
 
@@ -13875,7 +13885,7 @@ Blockquote
 ### Level 3
 </pre>
 </div>
-<div created="20200315024613344" creator="manmademagic" modified="20200316023050852" modifier="manmademagic" status="placeholder" tags="[[Tools &amp; Applications]]" title="Todoist">
+<div created="20200315024613344" creator="manmademagic" modified="20200319211421364" modifier="manmademagic" status="placeholder" tags="[[Tools &amp; Applications]] productivity" title="Todoist">
 <pre></pre>
 </div>
 <div created="20200314105018301" creator="manmademagic" modified="20200316234614695" modifier="manmademagic" tags="TOC" title="Tools &amp; Applications">
