@@ -26,7 +26,7 @@ pages:
         --setfield $:/custom/readonly/control readonly $:/custom/booleans/true text/plain 
         --deletetiddlers [prefix[$:/plugins/tiddlywiki/codemirror]]
         --deletetiddlers [prefix[$:/custom/state/]]
-        --deletetiddlers [prefix[$:/state/]]
+        --deletetiddlers [prefix[$:/state/]!prefix[$:/state/tab/sidebar]]
         --rendertiddler $:/core/save/all index.html text/plain
 #    - tiddlywiki --verbose --load index.html --output ./public --rendertiddlers [!is[system]] $:/core/templates/static.tiddler.html static text/plain
 #    - tiddlywiki --verbose --load index.html --output ./public --rendertiddler $:/core/templates/static.template.css static/static.css text/plain
