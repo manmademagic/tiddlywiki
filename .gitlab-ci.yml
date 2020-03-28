@@ -2,7 +2,8 @@
 image: node:latest
 
 # Basic process is as follows:
-#   Create public folder
+#   Create public dir with private subdir
+#   copy index.html and robots.txt 
 #   Install TiddlyWiki node commands
 #   Save all images
 #   Add _canonical_uri to all images
@@ -17,7 +18,9 @@ pages:
     paths:
       - node_modules
   script:
-    - mkdir public
+    - mkdir -p ./public/edit
+    - cp index.html ./public/edit/
+    - cp robots.txt ./public/
     - npm install -g tiddlywiki
     - tiddlywiki --load index.html --output public 
         --savetiddlers [is[image]] images
