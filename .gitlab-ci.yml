@@ -1,25 +1,33 @@
 # Use latest Node for this
 image: node:latest
 
-# Basic process is as follows
-# 1. Create temp .public folder
-# 2. Copy everything in the root dir to the .public folder
-# 3. Rename .public to public (This is part of the template ¯\_(ツ)_/¯ )
-# 4. Install tiddlywiki node commands
-# 5. Use tiddlywiki commands to export all sites as static files, along with the css
-# 6. Export the public folder as an artifact
+# Basic process is as follows:
+#   Create public folder
+#   Install TiddlyWiki node commands
+#   Save all images
+#   Add _canonical_uri to all images
+#   Clear data from all the images
+#   Enable readonly mode
+#   Delete the codemirror plugin
+#   Delete state tiddlers
+#   Save the output to ./public/index.html
+
 pages:
   cache:
     paths:
       - node_modules
   script:
-    - 'curl --location --output artifacts.zip --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/master/download?job=pages"'
-    - unzip artifacts.zip -d artifacts
     - mkdir public
-    - mv artifacts/public/images public
     - npm install -g tiddlywiki
-    - tiddlywiki --load index.html --output public --savetiddlers [is[image]] images
-    - tiddlywiki --load index.html --output public --setfield [is[image]] _canonical_uri $:/core/templates/canonical-uri-external-image text/plain --setfield [is[image]!is[system]] text "" text/plain --rendertiddler $:/core/save/all index.html text/plain
+    - tiddlywiki --load index.html --output public 
+        --savetiddlers [is[image]] images
+        --setfield [is[image]] _canonical_uri $:/core/templates/canonical-uri-external-image text/plain 
+        --setfield [is[image]] text "" text/plain 
+        --setfield $:/custom/readonly/control readonly $:/custom/booleans/true text/plain 
+        --deletetiddlers [prefix[$:/plugins/tiddlywiki/codemirror]]
+        --deletetiddlers [prefix[$:/custom/state/]]
+        --deletetiddlers [prefix[$:/state/]]
+        --rendertiddler $:/core/save/all index.html text/plain
 #    - tiddlywiki --verbose --load index.html --output ./public --rendertiddlers [!is[system]] $:/core/templates/static.tiddler.html static text/plain
 #    - tiddlywiki --verbose --load index.html --output ./public --rendertiddler $:/core/templates/static.template.css static/static.css text/plain
   artifacts:
