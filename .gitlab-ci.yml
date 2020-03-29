@@ -6,6 +6,7 @@ image: node:latest
 #   copy index.html and robots.txt 
 #   Install TiddlyWiki node commands
 #   Save all images
+#   Save the favicon.ico to root (for iOS/Mac browsers to detect)
 #   Add _canonical_uri to all images
 #   Clear data from all the images
 #   Enable readonly mode
@@ -24,8 +25,9 @@ pages:
     - npm install -g tiddlywiki
     - tiddlywiki --load index.html --output public 
         --savetiddlers [is[image]] images
+        --savetiddlers $:/favicon.ico favicon.ico
         --setfield [is[image]] _canonical_uri $:/core/templates/canonical-uri-external-image text/plain 
-        --setfield [is[image]] text "" text/plain 
+        --setfield [is[image]] text "" text/plain
         --setfield $:/custom/readonly/control readonly $:/custom/booleans/true text/plain 
         --deletetiddlers [prefix[$:/plugins/tiddlywiki/codemirror]]
         --deletetiddlers [prefix[$:/custom/state/]]
