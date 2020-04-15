@@ -26,8 +26,8 @@ pages:
     - tiddlywiki --load index.html --output public 
         --savetiddlers [is[image]] images
         --savetiddler $:/favicon.ico favicon.ico
-        --setfield [is[image]] _canonical_uri $:/core/templates/canonical-uri-external-image text/plain 
-        --setfield [is[image]] text "" text/plain
+        --setfield [is[image]!is[system]] _canonical_uri $:/core/templates/canonical-uri-external-image text/plain 
+        --setfield [is[image]!is[system]] text "" text/plain
         --setfield $:/custom/readonly/control readonly $:/custom/booleans/true text/plain 
         --deletetiddlers [prefix[$:/plugins/tiddlywiki/codemirror]]
         --deletetiddlers [prefix[$:/custom/state/]]
