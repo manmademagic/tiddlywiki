@@ -15,6 +15,8 @@ image: node:latest
 #   Save the output to ./public/index.html
 
 pages:
+  rules:
+    - if: '$CI_COMMIT_MESSAGE == "Saved by TiddlyWiki"'
   cache:
     paths:
       - node_modules
